@@ -1039,7 +1039,7 @@ exports.forgotpassworduser = (req, res, next) => {
             else {
                 res.send({
                     code: 203,
-                    success: "Email does not exits"
+                    success: "Email does not exits "
                 });
             }
 
@@ -1058,6 +1058,9 @@ exports.userResetpassword = (req,res,next) =>{
 
 exports.setNewPasswordUser = (req, res, next) => {
     console.log("req", req.body)
+    console.log("redsdq", req.body)
+
+    console.log("redsdsdsq", req.body)
     const User_Email = req.body.User_Email;
     const User_Password = req.body.User_Password;//where
     userModel.update(
@@ -1084,3 +1087,6 @@ exports.setNewPasswordUser = (req, res, next) => {
             })
         });
 }
+
+
+// dfakjdflajdfajsd

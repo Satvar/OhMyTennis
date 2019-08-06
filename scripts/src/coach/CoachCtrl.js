@@ -12,7 +12,7 @@ $scope.emailflag = true;
 
    if (sessionStorage.getItem("coachLoginFlag") == 'Y') {
       $location.path("OhMyTennis/coach_dashboard/")
-   }
+   }    
 
  
    $scope.coachlogin = function () {

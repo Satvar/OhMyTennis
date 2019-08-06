@@ -2,9 +2,11 @@ const Sequelize = require('sequelize')
 const moment = require('moment');
 //const dbconnection = ('../util/database')
 const sequelize = new Sequelize({
+  host :'172.107.175.10',
     database: 'OhMyTennis',
     username: 'root',
-    password: 'p@ssw0rd',
+    // password: 'p@ssw0rd',
+    password: '$8m9bB~4Q',
     dialect: 'mysql',
   });
 

@@ -1,0 +1,33 @@
+{
+  "name": "ohmytennis",
+  "version": "1.0.0",
+  "description": "tennisapp",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "handlebars": "^4.1.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.4",
+    "passport": "^0.4.0"
+  },
+  "devDependencies": {
+    "angular-ui-router": "^1.0.22",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql2": "^1.6.5",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^1.19.1",
+    "passport-facebook": "^3.0.0",
+    "passport-instagram": "^1.0.0",
+    "sequelize": "^5.10.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

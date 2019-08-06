@@ -1,0 +1,439 @@
+
+ 
+  <!-- Banner starts --> 
+  <div class="innerbanner">
+		<img src="../../views/images/coach_banner.jpg" alt="Los Angeles">
+		<div class="inner_carousel">
+			<h3>oh my coachs</h3>
+		</div>
+  </div>
+  <!-- Banner ends --> 
+  
+  <!-- Inner Search area starts -->
+	<!-- <div class="inner_searcharea">
+		<div class="banner_container">
+			<h3>Réservez un cours avec un coach</h3>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-lg-4">
+					<div class="form-group">
+						<div class="addon-lg">
+							<input class="form-control" id="" ng-model="SearchObj.ville" placeholder="Ville" type="text">
+							<label><img src="../../views/images/ville_icon.png"></label>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-lg-4">
+					<div class="form-group">
+						<div class="addon-lg">
+							<input class="form-control" id="" ng-model="SearchObj.dateofsearch" placeholder="Date" type="text">
+							<label><img src="../../views/images/date_icon.png">
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-lg-4 inner_search_div">
+					<button ng-click="searchcoach1()" class="btn black_btn">Recherche</button>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- Inner Search area ends --> 
+ 
+ <!-- section1 starts -->
+ <div class="section1 des_coach_content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h1 class="pagetitle_black">Les coachs Oh my tennis</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-9 col-sm-8 col-xs-12">			
+				<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse est laborum.</p>		
+		    </div>
+			<div class="col-md-3 col-sm-4 col-xs-12">
+				<a href="#" class="darkgrey_btn">en savoir plus</a>
+	        </div>
+		</div>
+	</div>
+ </div>
+ <!-- section1 ends -->
+
+ <!-- section2 starts -->
+ <div class="section2 des_coach_about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<img src="../../views/images/coach_bgimg.png" class="img-responsive abt_img">
+				<div class="des_coachform_bg">
+					<div class="row">
+					<h4 class="blackbold_title">Recherchez vos coachs</h4>
+						<div class="col-md-6 no_paddleft des_mpaddright no_paddright col-sm-6 col-xs-12">
+							<label>Cours</label>
+							<select ng-model="searchcityobj.course" class="form-control select_drop_custom1  coach_form_input_bg">
+								<option value="">Select your course</option>
+								<option value="Sélectionner">Sélectionner</option>
+								<option value="Coursindividuel">Cours individuel</option>
+								<option value="Courscollectif">Cours collectif</option>
+								<option value="unévénement">un événement</option>
+								<option value="Constructiondéquipe">Construction d'équipe</option>
+							</select>
+							
+							<label>Horaires</label>
+							<div class="~row">
+								
+								<div class="col-md-5 no_paddleft no_paddright col-sm-5 col-xs-5">
+										<div class="form-group">
+										  <div class='input-group date' id='datetimepickerstart'>
+											<span class="input-group-addon" style="padding-top:10px;font-size: 18px;
+											color: #908888;">
+											  <i class="fa fa-clock-o" aria-hidden="true"></i>
+											</span>
+											<input type='text' ng-model="searchcityobj.Course_STime" class="form-control" />
+										  </div>
+										</div>
+								</div>								
+								<div class="col-md-2 no_paddleft no_paddright des_to_add col-sm-2 col-xs-2">
+									&nbsp; <span>à</span>
+								</div>
+									
+								<div class="col-md-5 no_paddright no_paddleft col-sm-5 col-xs-5">
+										<div class="form-group">
+										  <div class='input-group date' id='datetimepickerend'>
+											<span class="input-group-addon" style="padding-top:10px;font-size: 18px;
+											color: #908888;">
+											  <i class="fa fa-clock-o" aria-hidden="true"></i>
+											</span>
+											<input type='text' ng-model="searchcityobj.Course_ETime" class="form-control" />
+										  </div>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 des_mpaddleft no_paddright no_paddleft col-xs-12">
+						
+							<label>Date</label>
+							<div class="form-group">
+									<div class="col-md-12 col-sm-12 col-xs-12 date no_padding">
+										<div class="input-group input-append date d-block" id="datePickerstart1">
+											<span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
+											<input type="text" ng-model="searchcityobj.coursedate" class="form-control " name="date" placeholder="Partir de la date" />
+										</div>
+									</div>
+									
+							</div>
+							<label>Ville</label>
+							<select ng-model="searchcityobj.ville" class="form-control">
+							  <option  value="" selected>Select Your City</option>
+							  <option ng-repeat="obj in cities track by $index" value="{{obj}}">{{obj}}</option>
+							  <!-- <option value="option 1">option 1</option>
+							  <option value="option 2">option 2</option>
+							  <option value="option 3">option 3</option> -->
+							</select>
+						</div>
+						<div class="clearfix"></div>
+						<div style="text-align:center; margin-top:16px;">
+						<a ng-click="searchcoachfrompage()" class="btn orange_borderbtn">trouver</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>	
+	</div>
+ </div>
+ <!-- section2 ends -->
+ 
+ 
+ <!-- section3 starts -->
+<div class="section3 des_related_coach">
+	<div class="container">		
+		<div class="row">			
+			<div class="col-md-9 col-sm-8 col-xs-12">
+				<h4>{{coachdetails.length}} coachs correspondent à votre recherche</h4>
+			</div>		
+			<div class="col-md-3 col-sm-4 col-xs-12 text-right">
+				<label>Tri Par</label>
+				<select>
+				  <option value="Ville">Ville</option>
+				  <option value="option 1">option 1</option>
+				  <option value="option 2">option 2</option>
+				  <option value="option 3">option 3</option>
+				</select>
+			</div>
+			<div class="clearfix"></div>
+			<div ng-if="!coachdetails.coaches_db" class="des_coach_reldetail col-lg-6 col-sm-12 col-xs-12" ng-repeat="coach in coachdetails">
+				<div class="des_coach_bg">
+					<div class="no_padding col-lg-4 col-sm-3 col-xs-4">
+						<img ng-src="../../upload/{{coach.Coach_Image}}" ng-if="coach.Coach_Image" />	
+						<img src="../../views/images/coach_playerimg1.png" ng-if="!coach.Coach_Image" />	
+
+					</div>
+					<div class="col-lg-8 col-sm-9 col-xs-12 text-center">
+					<div class="des_coach_rescontent">
+						<h5>{{coach.Coach_Fname}}</h5>
+						<div class="star-rating">
+							<ul class="list-inline" style="display:inline-block;">
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+							</ul>
+							<span class="grey_mild">(22 avis)</span>
+						</div>	
+						<div class="des_price_text">€100</div>&nbsp; &nbsp;<span class="grey_mild strike_out">€120</span>
+						<h6>Brevet d'Etat 1er degré</h6>
+					</div>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>					
+					</div>
+					<div class="clearfix"></div>
+					<div class="des_grey_overlay">
+						<div class="des_overlay_content">
+							<div class="padding_bot"><a href="#" class="btn orange_btn">RESERVER UN COURS</a></div>
+							<div class="padding_bot"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
+						</div>
+					</div>				
+				</div>
+			</div>
+			<div ng-if="coachdetails.coaches_db" class="des_coach_reldetail col-lg-6 col-sm-12 col-xs-12" ng-repeat="coach in coachdetails.coaches_db">
+					<div class="des_coach_bg">
+						<div class="no_padding col-lg-4 col-sm-3 col-xs-4">
+							<img ng-src="../../upload/{{coach.Coach_Image}}" ng-if="coach.Coach_Image" />	
+							<img src="../../views/images/coach_playerimg1.png" ng-if="!coach.Coach_Image" />	
+	
+						</div>
+						<div class="col-lg-8 col-sm-9 col-xs-12 text-center">
+						<div class="des_coach_rescontent">
+							<h5>{{coach.Coach_Fname}}</h5>
+							<div class="star-rating">
+								<ul class="list-inline" style="display:inline-block;">
+									<li class="list-inline-item"><i class="fa fa-star"></i></li>
+									<li class="list-inline-item"><i class="fa fa-star"></i></li>
+									<li class="list-inline-item"><i class="fa fa-star"></i></li>
+									<li class="list-inline-item"><i class="fa fa-star"></i></li>
+									<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+								</ul>
+								<span class="grey_mild">(22 avis)</span>
+							</div>	
+							<div class="des_price_text">€100</div>&nbsp; &nbsp;<span class="grey_mild strike_out">€120</span>
+							<h6>Brevet d'Etat 1er degré</h6>
+						</div>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>					
+						</div>
+						<div class="clearfix"></div>
+						<div class="des_grey_overlay">
+							<div class="des_overlay_content">
+								<div class="padding_bot"><a href="#" class="btn orange_btn">RESERVER UN COURS</a></div>
+								<div class="padding_bot"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
+							</div>
+						</div>				
+					</div>
+				</div>
+			
+			
+			<!-- <div class="des_coach_reldetail col-lg-6 col-sm-12 col-xs-12">
+				<div class="des_coach_bg">
+					<div class="no_padding col-lg-4 col-sm-3 col-xs-4">
+						<img src="../../views/images/coach_playerimg2.png" alt="coach_playerimg2" />				
+					</div>
+					<div class="col-lg-8 col-sm-9 col-xs-12 text-center">
+					<div class="des_coach_rescontent">
+						<h5>Dale Adams</h5>
+						<div class="star-rating">
+							<ul class="list-inline" style="display:inline-block;">
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+							</ul>
+							<span class="grey_mild">(22 avis)</span>
+						</div>	
+						<div class="des_price_text">€100</div>&nbsp; &nbsp;<span class="grey_mild strike_out">€250</span>
+						<h6>Brevet d'Etat 1er degré</h6>
+					</div>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>					
+					</div>
+					<div class="clearfix"></div>
+					<div class="des_grey_overlay">
+						<div class="des_overlay_content">
+							<div class="padding_bot"><a href="#" class="btn orange_btn">réSERVER UN COURS</a></div>
+							<div class="padding_bot"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="des_coach_reldetail col-lg-6 col-sm-12 col-xs-12">
+				<div class="des_coach_bg">
+					<div class="no_padding col-lg-4 col-sm-3 col-xs-4">
+						<img src="../../views/images/coach_playerimg3.png" alt="coach_playerimg3" />				
+					</div>
+					<div class="col-lg-8 col-sm-9 col-xs-12 text-center">
+					<div class="des_coach_rescontent">
+						<h5>Eddie Grant</h5>
+						<div class="star-rating">
+							<ul class="list-inline" style="display:inline-block;">
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+							</ul>
+							<span class="grey_mild">(22 avis)</span>
+						</div>	
+						<div class="des_price_text">€100</div>&nbsp; &nbsp;<span class="grey_mild strike_out">€250</span>
+						<h6>Brevet d'Etat 1er degré</h6>
+					</div>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>					
+					</div>
+					<div class="clearfix"></div>
+					<div class="des_grey_overlay">
+						<div class="des_overlay_content">
+							<div class="padding_bot"><a href="#" class="btn orange_btn">réSERVER UN COURS</a></div>
+							<div class="padding_bot"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="des_coach_reldetail col-lg-6 col-sm-12 col-xs-12">
+				<div class="des_coach_bg">
+					<div class="no_padding col-lg-4 col-sm-3 col-xs-4">
+						<img src="../../views/images/coach_playerimg4.png" alt="coach_playerimg4" />				
+					</div>
+					<div class="col-lg-8 col-sm-9 col-xs-12 text-center">
+					<div class="des_coach_rescontent">
+						<h5>Lena James</h5>
+						<div class="star-rating">
+							<ul class="list-inline" style="display:inline-block;">
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star"></i></li>
+								<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+							</ul>
+							<span class="grey_mild">(22 avis)</span>
+						</div>	
+						<div class="des_price_text">€100</div>&nbsp; &nbsp;<span class="grey_mild strike_out">€250</span>
+						<h6>Brevet d'Etat 1er degré</h6>
+					</div>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>					
+					</div>
+					<div class="clearfix"></div>
+					<div class="des_grey_overlay">
+						<div class="des_overlay_content">
+						<div class="padding_bot"><a href="#" class="btn orange_btn">réSERVER UN COURS</a></div>
+							<div class="padding_bot"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+		</div>
+			<div class="clearfix"></div>
+			<!-- <div class="text-center" style="padding-top:30px;">			
+				<a href="#" class="btn orange_borderbtn orange_text">Tous les Coachs</a>
+			</div> -->
+		</div>
+	</div>
+</div>
+ 
+  <!-- section3 ends -->
+
+ 
+
+ 
+
+<script>
+$(document).ready(function(){
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        
+        $('#back-to-top').tooltip('show');
+
+});
+</script>
+<script>
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+
+$('#itemslider').carousel({ interval: 3000 });
+
+$('.carousel-showmanymoveone .item').each(function(){
+var itemToClone = $(this);
+
+for (var i=1;i<6;i++) {
+itemToClone = itemToClone.next();
+
+if (!itemToClone.length) {
+itemToClone = $(this).siblings(':first');
+}
+
+itemToClone.children(':first-child').clone()
+.addClass("cloneditem-"+(i))
+.appendTo($(this));
+}
+});
+});
+
+</script>
+
+<script>
+
+		$(document).ready(function() {
+			$('#datePickerstart1')
+				.datepicker({
+					format: 'yyyy-mm-dd',
+					autoclose:'true',
+					startDate: new Date()
+				  
+				});
+		
+					$(function () {
+						$('#datetimepickerstart,#datetimepickerend').datetimepicker({
+							format: 'HH:mm'
+						});
+					});
+		
+		
+		});
+		</script>
+</body>
+</html>

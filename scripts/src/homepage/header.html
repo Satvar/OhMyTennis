@@ -1,0 +1,329 @@
+
+<div class="header_top">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-3 social_icons">
+                  <ul><li><a class="twitter" href="javascript:void();"><i class="fa fa-twitter"></i></a></li><li><a class="linked" href="javascript:void();"><i class="fa fa-linkedin"></i></a></li><li><a class="facebook" href="javascript:void();"><i class="fa fa-facebook-f"></i></a></li><li><a class="insta" href="javascript:void();"><i class="fa fa-instagram"></i></a></li></ul>
+              </div>
+              <div class="col-sm-9 top_menu">
+                  <ul>
+                      <!-- <li ng-click="goToAdminPanel()">
+                          <a>
+                              <img src="../../views/images/register_icon.png">&nbsp;
+                              <span>Admin Panel</span>
+                          </a>
+                      <li> -->
+                      <li>
+                          <a data-toggle="modal" data-target="#coachModal" href="javascript:void();">
+                              <img src="../../views/images/coach_icon.png">&nbsp;
+                              <span >CREER MON COMPTE</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a data-toggle="modal" data-target="#LoginModal" href="javascript:void();">
+                              <img src="../../views/images/login_icon.png">&nbsp;
+                              <span>CONNEXION</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a data-toggle="modal" data-target="#UserModal" href="javascript:void();">
+                              <img src="../../views/images/register_icon.png">&nbsp;
+                              <span>INSCRIVEZ-VOUS</span>
+                          </a>
+                      </li>
+                      <li class="search_div"><input class="search_btn" placeholder="Recherche" type="text"><a href="#"><i
+                                  class="fa fa-search"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="menuarea">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-3 col-lg-3 logo">
+                  <a class="sidebar-icon" href="javascript:void();"><img alt="" src="../../views/images/sidebar_menu.png"></a>
+                  <a href="#" class="logo_icon"><img alt="" src="../../views/images/logo.png"></a>
+              </div>
+              <div class="col-md-9 col-lg-9 right_menu">
+                  <nav class="navbar navbar-inverse">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                          <li id="concept" class="active"><a ui-sref="OhMyConseils">Oh My Concept</a></li>
+                          <!--<li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Page 1-1</a></li>
+                              <li><a href="#">Page 1-2</a></li>
+                              <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                          </li>-->
+                          <li><a href="#">Oh My Conseils</a></li>
+                          <li id="coaches"><a ui-sref="OhMyCoaches" ng-click="gotoohmycoaches()">Oh My Coachs</a></li>
+                          <li><a href="#">Oh My Event</a></li>
+                          <li><a href="#">Oh My Club House</a></li>
+                          <li><a href="#">Oh My Tennis</a></li>
+                          <li class="nav-item-img"><a class="nav-link" href="javascript:void();"><img alt="" src="../../views/images/Logo1.png"></a></li>
+                        </ul>
+                      </div>
+                  </nav>
+              </div>
+      </div>
+    </div>
+  
+    </div>
+    <div class="modal fade" id="coachModal" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" ng-click="closeCoachModal()" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"><img src="../../views/images/logo.png" class="img-responsive center-block" ><center><span class="sub_heading">Créer mon compte - Coach </span><center></h4>
+            </div>
+            <div class="modal-body">
+              <div class="des_section_popup_form">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="email">E-mail <span class="mandatory">*</span></label>
+                        <input type="email" class="form-control popup_field" id="txtEmail" ng-model="signUpObj.Coach_Email" placeholder="E-mail" name="email">
+                    </div>
+                  </div>
+    
+    
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="Prenom">Prénom <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control popup_field" ng-model="signUpObj.Coach_Fname" placeholder="Prénom" name="Prénom">
+    
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+               <div class="des_section_popup_form">
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="Nom">Nom <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control popup_field" ng-model="signUpObj.Coach_Lname" placeholder="Nom" name="Nom">
+    
+                    </div>
+                  </div>
+    
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="Telephone">Téléphone mobile <span class="mandatory">*</span></label>
+                        <input type="text" valid-number minlength="10" maxlength="10" class="form-control popup_field" ng-model="signUpObj.Coach_Phone" placeholder="Téléphone" name="Telephone">
+    
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+              </div>
+                <div class="des_section_popup_form">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="label_popup1" for="Mot de passe">Mot de passe <span class="mandatory">*</span></label>
+                            <input type="password" ng-change="validatePassword(signUpObj.Coach_Password)" class="form-control popup_field" ng-model="signUpObj.Coach_Password" placeholder="Mot de passe" name="Mot de passe" ng-style="{ border: flag == true ? '1px solid #f00' : '' }">
+                            <span ng-if="flag" style="font-size:13px; color:#f00;">Les mots de passe doivent au moins avoir 8 caractères avec les caractères, chiffres et symboles.</span>
+                        </div>
+                    </div>
+                    <!-- border: 1px solid #f00; -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="label_popup1" for="Ville">Ville <span class="mandatory">*</span></label>
+                            <input type="text" class="form-control popup_field" ng-model="signUpObj.Coach_City" placeholder="Ville" name="Ville">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer text-center" ng-click="gotoRegisterCoach()" > 
+                <a class="btn btn-primary popup_btn" >S'inscrire</a>
+                <p class="des_footer_txt reg_soc_line" style="color:#000;">ou connectez-vous avec</p>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 register_social_div">
+                  <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
+                  <div class="chip2 reg_fb_icon">
+                            <a class="twitter" href="javascript:void();"><i class="fa fa-facebook-f"></i></a>
+                            <span> Facebook </span>
+                        </div>
+                        </div>
+                          <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
+                  <div class="chip2 reg_tw_icon">
+                            <a class="twitter" href="javascript:void();"><i class="fa fa-twitter"></i></a>
+                            <span>Twitter </span>
+                        </div>
+                        </div>
+                          <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
+                  <div class="chip2 reg_insta_icon">
+                            <a class="twitter" href="javascript:void();"><i class="fa fa-instagram"></i></a>
+                            <span> Instagram </span>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="clearfix"></div>
+          </div>
+    
+        </div>
+      </div>
+    
+      <div class="modal fade" id="UserModal" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"><img src="../../views/images/logo.png" class="img-responsive center-block" ><center><span class="sub_heading">Créer mon compte</span><center></h4>
+            </div>
+            <div class="modal-body">
+              <div class="des_section_popup_form">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="email">E-mail <span class="mandatory">*</span></label>
+                        <input  type="email" class="form-control popup_field" ng-model="UserConfig.User_Email" placeholder="E-mail" name="email">
+                    </div>
+                  </div>
+    
+    
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="Prenom">Prenom <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control popup_field"  ng-model="UserConfig.User_FirstName" placeholder="Prenom" name="Prenom">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+               <div class="des_section_popup_form">
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="Nom">Nom <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control popup_field" ng-model="UserConfig.User_Name"  placeholder="Nom" name="Nom">
+                    </div>
+                  </div>
+    
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="label_popup1" for="Telephone">Téléphone mobile <span class="mandatory">*</span></label>
+                        <input type="text" valid-number minlength="10" maxlength="10" class="form-control popup_field" ng-model="UserConfig.User_Phone" placeholder="Téléphone" name="Telephone">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+              </div>
+                <div class="des_section_popup_form">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="label_popup1" for="Mot de passe">Mot de passe <span class="mandatory">*</span></label>
+                            <input type="password" ng-change="validatePassword(UserConfig.User_Password)" class="form-control popup_field" ng-model="UserConfig.User_Password" placeholder="Mot de passe" name="Mot de passe" ng-style="{ border: flag == true ? '1px solid #f00' : '' }">
+                            <span ng-if="flag" style="font-size:13px; color:#f00;">Les mots de passe doivent au moins avoir 8 caractères avec les caractères, chiffres et symboles.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="form-group">
+                        <label class="label_popup" for="Telephone">Ville <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control popup_field" ng-model="UserConfig.User_City" placeholder="Ville"
+                          name="Telephone">
+                      </div>
+                    </div>
+    
+    
+                    <div class="clearfix"></div>
+                </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer text-center">
+              <a ng-click="quickRegisterUser()" style="margin-top: -10px" class="btn btn-primary popup_btn">S'inscrire</a>
+              <p class="des_footer_txt" style="color:#000;">ou connectez-vous avec</p>
+              
+    
+    
+              <div class="col-md-12 col-sm-12 col-xs-12 register_social_div">
+              <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
+              <div class="chip2 reg_fb_icon">
+                        <a class="twitter" href="javascript:void();"><i class="fa fa-facebook-f"></i></a>
+                        <span> Facebook </span>
+                    </div>
+                    </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
+              <div class="chip2 reg_tw_icon">
+                        <a class="twitter" href="javascript:void();"><i class="fa fa-twitter"></i></a>
+                        <span>Twitter </span>
+                    </div>
+                    </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
+              <div class="chip2 reg_insta_icon">
+                        <a class="twitter" href="javascript:void();"><i class="fa fa-instagram"></i></a>
+                        <span> Instagram </span>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+      <!-- <div class="modal fade" id="LoginModal" role="dialog">
+            <div class="modal-dialog">
+            
+             
+              <div class="modal-content bg_modal">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <center><h4>Select Login</h4></center>
+                </div>
+                <div class="modal-body">
+                 <div class="col-md-6 col-sm-6 col-xs-12">
+                  <a ng-click="goToCoachLogin()" class="btn btn-primary popup_btn">Coach Login</a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                  <a ng-click="goToUserLogin()" class="btn btn-primary popup_btn">User Login</a>
+                    </div>
+                  <div class="clearfix"></div>
+                </div>
+                        </div>
+                </div>
+              </div> -->
+              <div class="modal fade" id="LoginModal" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content bg_modal">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <center>
+                        <h4>CONNEXION</h4>
+                      </center>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <a ng-click="goToCoachLogin()" class="btn btn-primary popup_btn">COACH</a>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <a ng-click="goToUserLogin()" class="btn btn-primary popup_btn">UTILISATEUR</a>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+         <script>
+            $(function () {
+                $('input').focus(function () {
+                    $(this).attr("rel", $(this).attr("placeholder"));
+                    $(this).removeAttr("placeholder");
+                });
+                $('input').blur(function () {
+                    $(this).attr("placeholder", $(this).attr("rel"));
+                    $(this).removeAttr("rel");
+                });
+            });
+        </script>

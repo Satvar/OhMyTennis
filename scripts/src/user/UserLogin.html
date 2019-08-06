@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8"> -->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="description" content="">
+<meta name="keyword" content="">
+<meta name="author" content="">
+
+<title>Welcome to Ohmytennis</title>
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script src="js/bootstrap.min.js"></script> 
+
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+</head> -->
+
+<script>
+	$(function () {
+		$('input').focus(function () {
+			$(this).attr("rel", $(this).attr("placeholder"));
+			$(this).removeAttr("placeholder");
+		});
+		$('input').blur(function () {
+			$(this).attr("placeholder", $(this).attr("rel"));
+			$(this).removeAttr("rel");
+		});
+	});
+</script>
+<body class="innsec">
+<div class="login-bg">
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+
+	  <div id="login-page">
+	  	<div class="container">
+		<div class="row">
+		<div class="col-lg-5 col-lg-offset-4">
+	  	
+		      
+			<form class="form-login" id="forms-login" autocomplete="off">
+			<!--<form method="post" class="form-login" id="forms-login" action="#" onsubmit="return login_validation()" method="post" autocomplete="off">-->
+					
+		        <h2 class="form-login-heading">SE CONNECTER<span><a ng-click="gobacktohomepage()" class="coach_closebtn"><i class="fa fa-close"></i></a></span></h2>
+		        <div class="login-wrap">
+				<div class="form-group">
+				<img src="../../views/images/logo.png" class="img-responsive center-block">
+				</div><br/>
+					<div class="form-group des_login_sec1">
+					<label class="label_login">E-mail <span class="star">*</span> </label>
+						<input type="email" class="form-control" name="email" id="email" ng-model="UserConfig.User_Email" placeholder="E-mail" type="text" ng-style="{ border: emailflag == false ? '1px solid #f00' : '' }" autofocus/>
+						<div id="email_error" class="small error"></div>
+						<span style="font-size:13px; color:#f00;" ng-if="emailflag == false">L'e-mail saisi est incorrect. Veuillez essayer à nouveau.</span>
+					</div>
+		           
+					<div class="form-group des_login_sec1">
+					<label class="label_login">Mot de passe <span class="star">*</span></label>
+						<input class="form-control"  name="password" id="password" ng-model="UserConfig.User_Password" placeholder="Password" type="password" ng-style="{ border: commonflag == false ? '1px solid #f00' : '' }" />
+						<div id="password_error" class="small error"></div>
+						<span style="font-size:13px; color:#f00;" ng-if="commonflag == false">Le mot de passe saisi est incorrect. Veuillez essayer à nouveau.</span>
+					</div>
+					<center>
+		            <label class="">
+
+		                    <a  ng-click="gotToForgotPassword()" class="forgot_pswd"> Forgot Password?</a>		
+
+		                  
+		            </label>
+					</center>					
+					<center><a ng-click="userlogin()" class="btn btn-primary des_login_btn">Login</a></center>
+
+					<!-- <center><a ng-click="signup()" class="btn btn-primary des_login_btn">SignUp</a></center> -->
+		        </div>
+			</form>
+			
+			</div>
+	  </div>	  	
+	  	
+	  	</div>
+	  </div>
+	  </div>
+
+</body>
+</html>

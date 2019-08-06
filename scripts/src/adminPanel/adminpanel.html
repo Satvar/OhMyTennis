@@ -1,0 +1,96 @@
+<body class="innsec">
+        <div class="login-bg">
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+
+    <div id="login-page">
+        <div class="container">
+    <div class="row">
+    <div>
+        
+        <form method="post" class="form-login" id="forms-login" style="max-width: 100%;margin: 1px 1px;">
+        
+            
+
+            <br>
+            <h2 class="form-login-heading">Coach List</h2>
+
+            <div class="container">   
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Active Status</th>
+                        <th>Block</th>
+                        <th>UnBlock</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-repeat="coachListObj in coachList">
+                    <tr>
+                        <td>{{coachListObj.Coach_Fname}}</td>
+                        <td>{{coachListObj.Coach_Lname}}</td>
+                        <td>{{coachListObj.Coach_Email}}</td>
+                        <td>{{coachListObj.createdAt|date:'MMMM dd, yyyy'}}</td>
+                       <td> {{coachListObj.Active_Status}}</td>
+                       
+                        <td><button   ng-click='blockCoach(coachListObj.Coach_ID)' type="button" class="btn"  style="min-height: 2px;border-radius: 4px;background-color:#e75b00;color: white">Block</button></td>
+                        <td><button   ng-click='UnblockCoach(coachListObj.Coach_ID)' type="button" class="btn"  style="min-height: 2px;border-radius: 4px;background-color:#e75b00;color: white"">UnBlock</button></td>
+                        <td><button   ng-click='deleteCoach(coachListObj.Coach_ID,coachListObj.Coach_Fname)' class="btn"   type="button"  style="min-height: 2px;border-radius: 4px;background-color:#e75b00;color: white">Delete</button></td
+
+                    </tr>
+                    </tbody>
+                </table>
+               
+            </div>
+        </form>
+        </div>
+        <br>
+        <div>
+                <form method="post" class="form-login" id="forms-login" style="max-width: 100%;margin: 1px 1px;">
+        <h2 class="form-login-heading">User List</h2>
+
+            <div class="container">   
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Active Status</th>
+                        <th>Block</th>
+                        <th>UnBlock</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-repeat="userListObj in userList">
+                    <tr>
+                        <td>{{userListObj.User_FirstName}}</td>
+                        <td>{{userListObj.User_Name}}</td>
+                        <td>{{userListObj.User_Email}}</td>
+                        <td>{{userListObj.createdAt|date:'MMMM dd, yyyy'}}</td>
+                        <td> {{userListObj.User_Status}}</td>
+
+                        <td><button   ng-click='blockUser(userListObj.id)' type="button" class="btn"  style="min-height: 2px;border-radius: 4px;background-color:#e75b00;color: white">Block</button></td>
+                        <td><button   ng-click='UnblockUser(userListObj.id)' type="button" class="btn"  style="min-height: 2px;border-radius: 4px;background-color:#e75b00;color: white"">UnBlock</button></td>
+                        <td><button   ng-click='deleteUser(userListObj.id,userListObj.User_FirstName)' class="btn"   type="button"  style="min-height: 2px;border-radius: 4px;background-color:#e75b00;color: white">Delete</button></td
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+</form>
+               
+    </div>
+    </div>	  	
+        
+        </div>
+    </div>
+    </div>
+        
+        </body>

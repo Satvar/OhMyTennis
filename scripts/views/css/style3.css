@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@media (min-width:320px) { .haspadd { padding:35px 0px; } }
+@media (min-width:768px) { .haspadd { padding:35px 0px; } }
+@media (min-width:992px) { .haspadd { padding:55px 0px; } }
+
+/** Titre page starts **/
+.page_title_div{
+	padding-bottom:6px;
+}
+.page_title {
+	font-size:30px;
+	color:#080808;
+    font-family: 'ComfortaaBold';
+	font-weight:bold;
+	margin-bottom:6px;
+}
+.section1.des_titre_list p , .section1.des_concept_list p {
+    font-family: 'MontserratMedium';
+	font-size:16px;
+	line-height:25px;
+}
+.section1.des_titre_list h5 , .section1.des_concept_list h5{
+	margin-top:22px;
+	line-height:23px;
+}
+.section2.des_titre_backtext {	
+	background: #1b1800 url(../images/titre_secbg.jpg) top center no-repeat;
+	background-size:100%;
+}
+.section2 .des_back_content , .section2 .des_back_content {
+	max-width:800px;
+	text-align:center;
+	margin:0px auto;
+	padding:100px 0px;
+}
+.des_back_content h4 {
+	color:#ffffff;
+	font-weight:bold;
+	font-size:28px;	
+    font-family: 'ComfortaaBold';
+}
+
+	.des_titre_list .center-block , .des_concept_list .center-block {
+	margin-bottom:13px;
+	}
+@media (min-width:320px) and (max-width:385px) {
+	body .des_back_content h4 {
+		font-size:14px;	
+	}
+	body .section2 .des_back_content {
+		padding:20px 0px;
+	}
+}
+@media (max-width:767px) {
+	.des_back_content h4, .des_back_content h4 {
+		font-size:20px;	
+		line-height:27px;
+	}
+	.section2 .des_back_content {
+		padding:40px 0px;
+	}
+}
+@media (min-width:992px) {
+	.section2.des_titre_backtext {	
+		background: #1b1800 url(../images/titre_secbg.jpg) top left no-repeat;
+		background-size:100%;
+	}
+	.section2 .des_back_content {
+		padding:130px 0px;
+	}
+}
+@media (min-width:1200px) {
+	.des_back_content h4 {
+		font-size:35px;	
+	}
+	.section2 .des_back_content{
+		padding:150px 0px;
+		
+	}
+}
+/** Titre page ends **/
+
+/** Concept page starts **/
+.section2.des_concept_backtext {	
+		background: #1b1800 url(../images/concept_secbg.jpg) top left no-repeat;
+		background-size:100%;
+	}
+	.des_concept_circletext {
+		color:#e75b00;
+		background: #f3f3f3; 
+	}
+	.des_orange_circle {
+		border-radius:50%;
+		background:#e75b00;
+		position:relative;
+		height:130px;
+		width:130px;
+		margin: 0px auto;
+		text-align: center;
+	}
+	.des_orange_circle img{
+		margin-top:30px;
+		
+	}
+
+/** Concept page ends **/

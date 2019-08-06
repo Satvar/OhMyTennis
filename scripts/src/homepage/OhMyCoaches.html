@@ -1,0 +1,967 @@
+
+<!-- <!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8"> -->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="description" content="">
+<meta name="keyword" content="">
+<meta name="author" content="">
+
+<title>Welcome to Ohmytennis</title>
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script src="js/bootstrap.min.js"></script> 
+
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" /> -->
+<style>
+.des_coach_abt_btn{
+margin-bottom:40px;
+}
+.timeslot{
+border:1px solid #f5984d;
+padding:10px;
+}
+.des_notification{
+float:right
+}
+.des_not_box1{
+margin-right:10px;
+display:inline;float:left
+}
+.des_time_box1{
+padding:10px;height:5px;width:5px;background-color:green;float:left;margin-right:5px;
+}
+.des_time_box2{
+padding:10px;height:5px;width:5px;background-color:red;float:left;margin-right:5px;
+}
+.des_time_box3{
+padding:10px;height:5px;width:5px;background-color:#ffa800;float:left;margin-right:5px;
+}
+.des_time_box4{
+padding:10px;height:5px;width:5px;background-color:#dbdbdb;float:left;margin-right:5px;
+}
+.demo { margin-top:5px;width: 100%; height: 15px; background-color: #ccc; }
+.demo.bg_div{ background-color: green; }
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.carousel-control { 
+    width: 8%;
+    width: 0px;
+}
+.carousel-control.left,
+.carousel-control.right { 
+height: 30px;
+    width: 40px;
+    background: none;
+    margin: auto -35px;
+}
+.carousel-control > a > span {
+    color: white;
+	  font-size: 29px !important;
+}
+
+.carousel-col { 
+    position: relative; 
+    min-height: 1px; 
+    padding: 5px; 
+    float: left;
+ }
+
+ .active > div { display:none; }
+ .active > div:first-child { display:block; }
+
+/*xs*/
+@media (max-width: 767px) {
+  .carousel-inner .active.left { left: -50%; }
+  .carousel-inner .active.right { left: 50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		     { left: -50%; }
+  .carousel-col                { width: 50%; }
+	.active > div:first-child + div { display:block; }
+}
+
+/*sm*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-inner .active.left { left: -50%; }
+  .carousel-inner .active.right { left: 50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		     { left: -50%; }
+  .carousel-col                { width: 50%; }
+	.active > div:first-child + div { display:block; }
+}
+
+/*md*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .carousel-inner .active.left { left: -33%; }
+  .carousel-inner .active.right { left: 33%; }
+	.carousel-inner .next        { left:  33%; }
+	.carousel-inner .prev		     { left: -33%; }
+  .carousel-col                { width: 33%; }
+	.active > div:first-child + div { display:block; }
+  .active > div:first-child + div + div { display:block; }
+}
+
+/*lg*/
+@media (min-width: 1200px) {
+  .carousel-inner .active.left { left: -25%; }
+  .carousel-inner .active.right{ left:  25%; }
+	.carousel-inner .next        { left:  25%; }
+	.carousel-inner .prev		     { left: -25%; }
+  .carousel-col                { width: 25%; }
+	.active > div:first-child + div { display:block; }
+  .active > div:first-child + div + div { display:block; }
+	.active > div:first-child + div + div + div { display:block; }
+}
+
+.block {
+	width: 306px;
+	height: 230px;
+}
+
+.red {background: red;}
+
+.blue {background: blue;}
+
+.green {background: green;}
+
+.yellow {background: yellow;}
+.carousel-control > a > span{
+color:#555;
+padding:5px;border:1px solid #555;
+background-color:#fff;
+padding:1px 10px;
+border-radius:50%;
+}
+.thumb-content{
+padding: 15px;
+}
+.thumb-content p {
+text-align:center;
+}
+.list-inline{
+text-align:center;
+}
+.thumb-content h4 {
+text-align:center;
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    color: #e75b00;
+}
+</style>
+</head>
+<body class="innsec">
+<!-- Header area starts -->
+ <header>
+ <!-- Header Top area starts -->
+  <!-- <div class="header_top">
+  	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 social_icons">
+				<ul><li><a class="twitter" href="javascript:void();"><i class="fa fa-twitter"></i></a></li><li><a class="linked" href="javascript:void();"><i class="fa fa-linkedin"></i></a></li><li><a class="facebook" href="javascript:void();"><i class="fa fa-facebook-f"></i></a></li><li><a class="insta" href="javascript:void();"><i class="fa fa-instagram"></i></a></li></ul>
+			</div>
+			<div class="col-sm-9 top_menu">
+				<ul>
+					    <li>
+								<a data-toggle="modal" data-target="#coachModal" href="javascript:void();">
+									<img src="../../views/images/coach_icon.png">&nbsp;
+									<span>DEVENIR COACH</span>
+								</a>
+							</li>
+							<li>
+								<a data-toggle="modal" data-target="#LoginModal" href="javascript:void();">
+									<img src="../../views/images/login_icon.png">&nbsp;
+									<span>CONNEXION</span>
+								</a>
+							</li>
+							<li>
+								<a data-toggle="modal" data-target="#UserModal" href="javascript:void();">
+									<img src="../../views/images/register_icon.png">&nbsp;
+									<span>INSCRIVEZ-VOUS</span>
+								</a>
+							</li>
+						<li class="search_div"><input class="search_btn" placeholder="Recherche" type="text"><a href="#"><i class="fa fa-search"></i></a></li></ul>
+			</div>
+		</div>
+	</div>
+  </div> -->
+  <!-- <div id="navbar" ng-controller="HeaderCtrl"><div ng-include src="'./src/homepage/header.html'"></div>
+</div> -->
+ <!-- Header Top area ends -->
+ </header>
+ 
+ <!-- Menuarea starts -->
+  <!-- <div class="menuarea">
+  	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 col-lg-4 logo">
+				<a class="sidebar-icon" href="javascript:void();"><img alt="" src="../../viewsimages/sidebar_menu.png"></a>
+				<a href="#" class="logo_icon"><img alt="" src="../../views/images/logo.png"></a>
+			</div>			
+			<div class="col-md-9 col-lg-8 right_menu">
+				<nav class="navbar navbar-inverse">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					  </button>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+					  <ul class="nav navbar-nav">
+						<li ><a href="#">Oh My Concept</a></li>
+						<li><a href="#">Oh My Conseils</a></li>
+						<li class="active"><a href="#">Oh My Coachs</a></li>
+						<li><a href="#">Oh My Event</a></li>
+						<li><a href="#">Oh My Club House</a></li>
+						<li><a href="#">Oh My Tennis</a></li>
+						<li class="nav-item-img"><a class="nav-link" href="javascript:void();"><img alt="" src="../../views/images/Logo1.png"></a></li>
+					  </ul>
+					</div>
+				</nav>
+			</div>
+	</div>
+  </div>
+  
+  </div> -->
+ <!-- Menuarea starts -->
+ 
+<!-- Inner Banner starts --> 
+<div class="innerbanner">
+		<img src="../../views/images/coach_banner.jpg" alt="Los Angeles">
+		<div class="inner_carousel">
+			<h3>oh my coachs</h3>
+		</div>
+  </div>
+  <!-- Banner ends --> 
+  
+  <!-- Inner Search area starts -->
+	<div class="inner_searcharea">
+		<div class="banner_container">
+			<h3>Réservez un cours avec un coach</h3>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-lg-4">
+					<div class="form-group">
+						<div class="addon-lg">
+							<input class="form-control" id="" ng-model="SearchObj.ville" placeholder="Ville" type="text">
+							<label><img src="../../views/images/ville_icon.png"></label>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-lg-4">
+					<div class="form-group">
+						<div class="addon-lg">
+							<input class="form-control" id="" ng-model="SearchObj.dateofsearch" placeholder="Date" type="text">
+							<label><img src="../../views/images/date_icon.png">
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-lg-4 inner_search_div">
+					<button ng-click="searchcoach()" class="btn black_btn">Recherche</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Inner Search area ends -->
+ 
+
+<div class="container">
+	<div class="des_coach_abt">
+		<div class="col-md-8 col-sm-8 col-xs-12">
+			<div class="des_coach_abt_sec">
+				<h1 class="des_coach_abt_heading">{{coachdetails.Coach_Fname}}</h1>
+				<div class="star-rating">
+					<ul class="list-inline1">
+						<li class="list-inline-item"><i class="fa fa-star"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+					</ul>
+				</div>
+			</div>
+				<div class="des_coach_abt_price">
+					<a href="#" class="btn btn-default">330 € / 10 cours  </a>
+					<a href="#" class="btn btn-default">{{coachdetails.Coach_Price}} € / 1 heure </a>
+				</div>
+				<div class="clearfix"></div>
+				<p class="des_coach_abt_para">Brevet d'Etat 1er degré</p>
+				<p class="des_coach_abt_para1">{{coachdetails.Coach_Description}}  </p>
+				
+				
+				<div class="des_detail_sec">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="des_row1">
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<p class="des_icon_class"><img src="../../views/images/detail_icon1.png"> Noté 5/5 par ses élèves</p>
+							
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<p class="des_icon_class"><img src="../../views/images/detail_icon2.png"> Moyen de paymentchèque ou espèce</p>
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<p class="des_icon_class"><img src="../../views/images/detail_icon3.png"> Curriculum vitae</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="des_row2">
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<p class="des_icon_class"><img src="../../views/images/detail_icon4.png"> Moyen de transport</p>
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<p class="des_icon_class"><img src="../../views/images/detail_icon5.png"> Coach connecté</p>
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<p class="des_icon_class"><img src="../../views/images/detail_icon6.png"> Cours avec vidéo</p>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div><br/><br/><br/>
+				<p class="des_map_content">Intervention géographique :
+				<select class="select_drop_custom">
+					<option>Liste des villes</option>
+					<option>Select</option>
+					<option>Select</option>
+				</select>
+				
+				</p>
+				<br/>
+				<div class="des_map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.75769374048!2d2.27701965694365!3d48.858950681492054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sin!4v1563876822850!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				
+				<br/><br/>
+				
+			<div class="timeslot">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+			<center><p style="font-family:'Montserrat Medium';"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Semaine du 14/07/19 au 20/07/19 <i class="fa fa-angle-double-right" aria-hidden="true"></i></p></center>
+				<div class="table-responsive">
+					<table class="table ">
+						<thead>
+							<tr>
+							<th></th>
+							<th>Sunday</th>
+							<th>Monday</th>
+							<th>Tuesday</th>
+							<th>Wednesday</th>
+							<th>Thursday</th>
+							<th>Friday</th>
+							<th>Saturday</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<th>09:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>10:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>11:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>12:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>13:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>14:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>15:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>16:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>17:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>18:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>19:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>20:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>21:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							<tr>
+								<th>22:00</th>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+								<td>
+									<p class="demo" ></p>
+								</td>
+							</tr>
+							
+							
+						</tbody>
+					</table>
+					<div class="des_notification">
+						<div class="des_not_box1"><p class="des_time_box1"></p><span>Disponible</span></div>
+						<div class="des_not_box1"><p class="des_time_box2"></p><span>En amente</span></div>
+						<div class="des_not_box1"><p class="des_time_box3"></p><span>Reserve</span></div>
+						<div class="des_not_box1"><p class="des_time_box4"></p><span>Non disponible</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+			<br/><br/><br/><br/><br/>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+			<h4 class="des_contents_cdetail_title">Expérience de Lena</h4>
+			<p class="des_contents_cdetail">Enseignant depuis plus de 10 ans , je peux vous réserver un terrain intérieur à Paris dans le 18eme ou également a Montreuil (Seine Saint Denis).</p>
+			<p class="des_contents_cdetail">Voici les clubs de tennis où j'ai travaillé en encadrant différents publics (mini-tennis , initiation , perfectionnement , entrainement ) :</p>
+			
+			<ul class="des_sports_list">
+					<li>- Reuilly Nation Sports</li>
+					<li>- Tennis Club 12ème Bercy</li>
+					<li>- Tennis Club de Montreuil</li>
+					<li>- UAS Tennis Saint Cloud</li>
+					<li>- Championnet Sports</li>
+					<li>- TC Rueil Malmaison</li>
+					<li>- TC Paris Centre</li>
+				</ul>
+				<br/>
+			<p class="des_cdetail_innertxt">Mastère en Management des Organisations du Sport Audencia Nantes (Ecole de Commerce)</p>	
+			<br/>
+			</div>
+			<ul class="des_sponcers">
+				<li>DIA (Streetwear) Assistant marketing</li>
+				<li>BNP PARIBAS Assistant chef de projet</li>
+				<li>ADIDAS Eyewear Responsable du service marketing</li>
+				<li>SKISET Responsable fidelisation webmarketing</li>
+			</ul>
+				<center><a href="#" class="btn btn-primary des_coach_abt_btn">RESERVER UN COURS</a></center>
+		</div>
+		
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<img ng-if="coachdetails.Coach_Image" ng-src="../../upload/{{coachdetails.Coach_Image}}" class="img-responsive center-block">
+			<img ng-if="coachdetails.Coach_Image ==null" src="../../views/images/image4.jpg" class="img-responsive center-block">
+			<center><a href="#" class="btn btn-primary des_coach_abt_btn">RESERVER UN COURS</a>
+			<br/><br/><br/>
+			<img src="../../views/images/fav_logo.png"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="des_fav_content">Ajouter à mes coachs favoris</span>
+			<div class="des_social_icons_footer1">
+				<ul><li><a class="twitter" href="javascript:void();"><i class="fa fa-twitter"></i></a></li><li><a class="linked" href="javascript:void();"><i class="fa fa-linkedin"></i></a></li><li><a class="facebook" href="javascript:void();"><i class="fa fa-facebook-f"></i></a></li><li><a class="insta" href="javascript:void();"><i class="fa fa-instagram"></i></a></li></ul>
+				
+			</div>
+			<p class="des_right_content">Les 22 avis des élèves de Lena</p>
+				<div class="star-rating">
+					<ul class="list-inline">
+						<li class="list-inline-item"><i class="fa fa-star"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+						<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+					</ul>
+				</div>
+				
+				<div class="chip">
+					<img src="../../views/images/coach_detail_right_mini.png" alt="no file" >
+					<span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+				</div>
+				
+				<div class="chip1">
+					<img src="../../views/images/coach_detail_right_mini.png" alt="no file" >
+					<span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+				</div>
+				
+				<div class="chip">
+					<img src="../../views/images/coach_detail_right_mini.png" alt="no file" >
+					<span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+				</div>
+			</center>
+		</div>
+		</div>
+		</div>
+		<div class="clearfix"></div>
+		
+		<div class="coach_detail_team_slider">
+		<div class="container">
+			
+			<div class="col-md-12 col-sm-12 col-xs-12">
+			<h4 class="des_cdetail_title">Les autres coachs proches de chez vous.</h4>
+			<div class="des_line"></div>
+				<div id="carousel_detail_page" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="carousel-col">
+								<img src="../../views/images/image4.jpg" class="center-block">
+								<div class="thumb-content">
+									<h4>Jenna Rogers</h4>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<p>The object of the game is to play the ball in such...</p>
+								</div>
+							</div>
+							
+						</div>
+						<div class="item">
+							<div class="carousel-col">
+								<img src="../../views/images/image2.jpg"  class="center-block">
+								<div class="thumb-content">
+									<h4>Jenna Rogers</h4>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<p>The object of the game is to play the ball in such...</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="carousel-col">
+								<img src="../../views/images/image3.jpg"  class="center-block">
+								<div class="thumb-content">
+									<h4>Kelly Clark</h4>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+										</ul>
+									</div>
+									<p>The object of the game is to play the ball in such...</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="carousel-col">
+								<img src="../../views/images/image5.jpg"  class="center-block">
+								<div class="thumb-content">
+									<h4>Brandon Stone</h4>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<p>The object of the game is to play the ball in such...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Controls -->
+					<div class="left carousel-control">
+						<a href="#carousel_detail_page" role="button" data-slide="prev">
+							<img src="../../views/images/LT.png">
+						</a>
+					</div>
+					<div class="right carousel-control">
+						<a href="#carousel_detail_page" role="button" data-slide="next">
+							<img src="../../views/images/RT.png">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</div>
+ 
+
+<script>
+
+	
+$(document).ready(function(){
+$(".demo").click(function () {
+   $(this).toggleClass("bg_div");
+});
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        
+        $('#back-to-top').tooltip('show');
+
+});
+</script>
+<script>
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
+
+<script>
+$('#carousel_detail_page[data-type="multi"] .item').each(function() {
+	var next = $(this).next();
+	if (!next.length) {
+		next = $(this).siblings(':first');
+	}
+	next.children(':first-child').clone().appendTo($(this));
+
+	for (var i = 0; i < 2; i++) {
+		next = next.next();
+		if (!next.length) {
+			next = $(this).siblings(':first');
+		}
+
+		next.children(':first-child').clone().appendTo($(this));
+	}
+});
+</script>
+
+</body>
+</html>

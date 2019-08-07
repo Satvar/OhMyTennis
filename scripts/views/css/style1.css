@@ -275,8 +275,13 @@ box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
 		background-color:#ffffff;
 	}
 	.form-group{
-		margin-bottom:15px!important;
-	}
+		margin-bottom:15px !important;
+        font: 400 14px 'Open Sans',Arial,sans-serif;
+    }
+    .des_form_section_coach h4 {    
+        font: bold 16px 'Open Sans',Arial,sans-serif;
+        margin-bottom: 25px;
+    }
 	.form_buttons a{
 		margin-left:8px;
 		padding:4px 30px;
@@ -285,9 +290,8 @@ box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
 		background-color:#fff!important;
 		color:#000
 	}
-	.box-body label{
-		font-size: 15px;
-
+	.box-body label{   
+        font: 400 14px 'Open Sans',Arial,sans-serif;
 	}
 	.des_form_section_coach  input[type="checkbox"]{
 		/* margin-top:0px; */
@@ -331,6 +335,10 @@ box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
     label{
 		font-family: Montserrat;
 		font-size:14px;
-		font-weight:bold;
+        font-weight:bold;
+        font: 400 14px 'Open Sans',Arial,sans-serif;
 	}
 /****************************************************** common admin **************************************************/
+
+
+

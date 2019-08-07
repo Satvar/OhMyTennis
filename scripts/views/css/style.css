@@ -457,6 +457,15 @@ ul li {
 		top: 13px;
 		left: 40px;
 	}
+	.my_coach .nav-pills > li.active > a, .my_coach .nav-pills > li.active > a:hover, .my_coach .nav-pills > li.active > a:focus {
+		padding: 10px 10px;
+	}
+	.des_abt_btn {
+		
+	}
+	.my_coach .nav-pills > li > a {
+		font-size:10px;
+	}
 }
 @media (min-width:640px) {
 	.form-group {
@@ -1111,7 +1120,7 @@ section p{font-family:'Lato', sans-serif;}
 .des_about_heading{
 	font-family:'Comfortaa';
 	font-weight:bold;
-	font-size:45px;
+	font-size:27px;
 	color:#000;
 	text-align:center;
 }
@@ -1207,7 +1216,7 @@ section p{font-family:'Lato', sans-serif;}
 .coach_heading{
 	font-family:'Comfortaa';
 	font-weight:bold;
-	font-size:45px;
+	font-size:28px;
 	color:#e75b00;
 	text-align:center;
 }
@@ -1783,6 +1792,9 @@ section p{font-family:'Lato', sans-serif;}
 		background: rgba(231,91,0,0.70) url(../images/caoach_searchbg.png);
 		padding:26px 0px;
 		position: relative;
+	}
+	.des_about_heading , .coach_heading {
+		font-size: 45px;
 	}
 	.blackbold_title {
 		font-size:32px;
@@ -2924,7 +2936,8 @@ span.grey_mild {
 }
 
 .form-control,
-body #pjWrapperTSBCalendar_1 { font-family: 'Montserrat'; }
+body #pjWrapperTSBCalendar_1 { font-family: 'Montserrat'; 
+	font: 400 14px 'Open Sans',Arial,sans-serif;}
 
 #pjWrapperTSBCalendar_1 .btn-primary { background-color: #378edb; border-color: #2e75b3; }
 

@@ -46,7 +46,10 @@
          url('../fonts/MontserratBold.svg#MontserratBold') format('svg');
 }
 
+.menuarea .navbar-nav > li > a {
+font-weight: bold;
 
+}
 body {
 	font-weight:normal;
 	font-family: 'Montserrat', sans-serif;

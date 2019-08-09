@@ -13,20 +13,20 @@
                               <span>Admin Panel</span>
                           </a>
                       <li> -->
-                      <li>
-                          <a data-toggle="modal" data-target="#coachModal" href="javascript:void();">
+                      <li ng-click="goToCoachRegistration()">
+                          <a>
                               <img src="../../views/images/coach_icon.png">&nbsp;
-                              <span >CREER MON COMPTE</span>
+                              <span >DEVENIR COACH</span>
                           </a>
                       </li>
                       <li>
-                          <a data-toggle="modal" data-target="#LoginModal" href="javascript:void();">
+                          <a ng-click="goToCoachLogin()">
                               <img src="../../views/images/login_icon.png">&nbsp;
                               <span>CONNEXION</span>
                           </a>
                       </li>
-                      <li>
-                          <a data-toggle="modal" data-target="#UserModal" href="javascript:void();">
+                      <li ng-click="goToUserRegistration()">
+                          <a>
                               <img src="../../views/images/register_icon.png">&nbsp;
                               <span>INSCRIVEZ-VOUS</span>
                           </a>
@@ -153,7 +153,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12 register_social_div">
                   <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
                   <div class="chip2 reg_fb_icon">
-                            <a class="twitter" href="javascript:void();"><i class="fa fa-facebook-f"></i></a>
+                            <a class="twitter" href="/OhMyTennis/auth/facebook"><i class="fa fa-facebook-f"></i></a>
                             <span> Facebook </span>
                         </div>
                         </div>
@@ -249,7 +249,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12 register_social_div">
               <div class="col-md-4 col-sm-4 col-xs-12 no_padding">
               <div class="chip2 reg_fb_icon">
-                        <a class="twitter" href="javascript:void();"><i class="fa fa-facebook-f"></i></a>
+                        <a class="twitter" href="/OhMyTennis/auth/facebookUser"><i class="fa fa-facebook-f"></i></a>
                         <span> Facebook </span>
                     </div>
                     </div>

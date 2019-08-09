@@ -109,6 +109,10 @@ const sequelize = new Sequelize({
       type: Sequelize.STRING,
     },
 
+    User_type: {
+      type: Sequelize.STRING,
+    },
+
   
   });
   Coaches.sync()

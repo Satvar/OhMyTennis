@@ -98,47 +98,9 @@ $(document).ready(function() {
 		<form role="form">
 			<div class="des_form_section_coach">
 				<div class="box-body">
-				<!-- <div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-						
-							<label for="exampleInputEmail1">Type de cours</label>
-							<select ng-model="dataConfig.Course_Type" class="form-control select_drop_custom1  coach_form_input_bg">
-								<option value="Sélectionner">Sélectionner</option>selec
-								<option value="Coursindividuel">Cours individuel</option>
-								<option value="Courscollectif">Cours collectif</option>
-								<option value="unévénement">un événement</option>
-								<option value="Constructiondéquipe">Construction d'équipe</option>
-							</select>
-						</div>
-					</div> -->
-					<!-- <div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Nom du cours</label>
-							<input type="text" ng-model="dataConfig.Course_Name" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer nom du cours">
-						</div>
-					</div> -->
+			
 					<div class="clearfix"></div>
-					<!-- <div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Rendez-vous amoureux</label>
-							<div class="row">
-								<div class="form-group">
-									<div class="col-md-6 col-sm-6 col-xs-12 date" >
-                      <div class="input-group input-append date" id="datePickerstart">
-                          <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
-                          <input type="text" jqdatepicker="" class="form-control" name="date" placeholder="Partir de la date">
-                        </div>
-									</div> 
-									<div class="col-md-6 col-sm-6 col-xs-12 date" >
-										<div class="input-group input-append date" id="datePickerend">
-											<span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
-											<input type="text" class="form-control" name="date" placeholder="À ce jour"/>
-										</div>
-									</div>
-                </div>
-							</div>
-						</div>
-					</div> -->
+					
 				
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="form-group">
@@ -178,30 +140,7 @@ $(document).ready(function() {
 					</div>
 					
 					
-					<!-- <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="form-group">
-                      <div class='input-group date' id='datetimepickerstart'>
-                        <span class="input-group-addon">
-                          <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        </span>
-                        <input type='text' ng-model="dataConfig.Course_STime" class="form-control" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="form-group">
-                      <div class='input-group date' id='datetimepickerend'>
-                        <span class="input-group-addon">
-                          <i class="fa fa-clock-o" ng-model="dataConfig.Course_ETime" aria-hidden="true"></i>
-                        </span>
-                        <input type='text' class="form-control" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          </div> -->
+				
 					
 					
 					<div class="col-md-6 col-sm-6 col-xs-12">
@@ -315,58 +254,67 @@ $(document).ready(function() {
 								<th>All</th>
 							  </tr>
 							  <tr>
-								<td><b>Monday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-							  </tr>
+								<td><b>Monday</b></td>mon
+								<td style="text-align:center"> <input name='mon' type="checkbox" ng-model = 'availabilityObj.Mon_mor' ng-true-value="'Y'" ng-false-value="'N'" /></td>
+								<td style="text-align:center"> <input name='mon' type="checkbox"ng-model = 'availabilityObj.Mon_af' ng-true-value="'Y'" ng-false-value="'N'"  /></td>
+								<td style="text-align:center"> <input name='mon' type="checkbox" ng-model = 'availabilityObj.Mon_eve' ng-true-value="'Y'" ng-false-value="'N'" /></td>
+								<td style="text-align:center"> <input id="all_check" type="checkbox"  ng-model="chkall" onchange='checkAll()' ng-true-value="'mon'"   ng-false-value="'mon'"/></td>
+                </tr>
+                <script>
+
+
+                  function checkAll()
+                  {
+                    console.log('d');
+                  }
+                
+                </script>
 							  <tr>
 								<td><b>Tuesday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input name='tue' type="checkbox" ng-model = 'availabilityObj.Tue_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input name='tue' type="checkbox" ng-model = 'availabilityObj.Tue_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input name='tue' type="checkbox"ng-model = 'availabilityObj.Tue_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input ' type="checkbox" ng-model="chkall1" ng-change='checkAll(tue)'/></td>
 							  </tr>
 							  <tr>
 								<td><b>Wednesday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Wed_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Wed_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox"ng-model = 'availabilityObj.Wed_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
 								<td><b>Thursday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Thu_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Thu_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Thu_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
 								<td><b>Friday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Fri_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Fri_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Fri_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox" /></td>
 							  </tr>
 							  <tr>
 								<td><b>Saturday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sat_mor' ng-true-value="'Y'" ng-false-value="'N'" /></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sat_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sat_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
 								<td><b>Sunday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sun_mor' ng-true-value="'Y'" ng-false-value="'N'" /></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sun_af' ng-true-value="'Y'" ng-false-value="'N'" /></td>
+								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sun_eve' ng-true-value="'Y'" ng-false-value="'N'" /></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							</table>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Oui</button>
+        <button type="button"  ng-click = "saveAvailability()" class="btn btn-success" data-dismiss="modal">Oui</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
       </div>
     </div>

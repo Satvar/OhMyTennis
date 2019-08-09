@@ -5,6 +5,7 @@ const passport = require('passport')
 const uploadfile  = require('../util/imageupload')
 const passportFacebook = require('../auth/facebook');
 const passportInstagram = require('../auth/instagram');  //check fot this when testing
+const FacebookStrategy = require('passport-facebook').Strategy;
 
 
 const Authctrl  = require('../controllers/UserCtrl')
@@ -47,17 +48,20 @@ router.post('/deleteUser' , Authctrl.deleteUser)
 
 //social logins
 
-router.get('/auth/facebook',
-  passportFacebook.authenticate('facebook'));
+ router.get('/auth/facebook',
+ passport.authenticate('facebook', { scope: ['email'] }));
+
+
+  
+
 router.get('/auth/instagram',
   passportFacebook.authenticate('instagram'));
 
-router.get('/auth/facebook/callback',
-  passportFacebook.authenticate('facebook', { failureRedirect: '/login' }),  //user userlogin route instead of /login
+router.get('/auth/facebook/callback',passportFacebook.authenticate('facebook', { failureRedirect: '/' }),  //user userlogin route instead of /login
   function (req, res) {
     console.log("===========", res)
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('http://localhost:3000/#!/OhMyTennis/AdminPanel/');
   });
 router.get('/auth/instagram/callback',
 passport.authenticate('instagram', { failureRedirect: '/login' }),  //user userlogin route instead of /login

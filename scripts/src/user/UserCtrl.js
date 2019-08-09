@@ -32,7 +32,9 @@ coach.controller('UserCtrl', function ($scope, Coach,$location) {
 
   $scope.userlogin = function () {
     if ($scope.UserConfig.User_Email == "" || $scope.UserConfig.User_Email == undefined) {
-      alert("Please enter user email")
+      document.getElementById('Coach_Email').style.display = 'block';
+      $("#email").addClass("alert_field");
+
       return;
     }
 
@@ -45,16 +47,7 @@ coach.controller('UserCtrl', function ($scope, Coach,$location) {
 
     Coach.userSignIn($scope.UserConfig, function onSuccess(response) {
       $scope.details = response;
-      //alert(response.msg)
-    //   if (response.errCode == 200) {
-    //     sessionStorage.setItem('UserDetailObj', JSON.stringify(response.userlist))
-    //     $location.path("/OhMyTennis")
-    //  }
-    //  else {
-    //     //console.log("in user login")
-    //     alert(response.msg)
-    //  }
-    //   $scope.UserConfig = {};
+      
       if (response.code == 200) {
         sessionStorage.setItem("userLoginFlag", "Y");
         sessionStorage.setItem('UserDetailObj', JSON.stringify(response.userlist))

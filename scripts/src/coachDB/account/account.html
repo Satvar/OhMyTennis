@@ -2,8 +2,254 @@
 
 <html>
 <style>
+
+.wizard {
+	
+  margin: 20px auto;
+  background: #fff;
+}
+
+  .wizard .nav-tabs {
+      position: relative;
+      margin: 10px auto;
+      margin-bottom: 0;
+      border-bottom-color: #e0e0e0;
+  }
+
+  .wizard > div.wizard-inner {
+      position: relative;
+  }
+
+.connecting-line {
+  height: 2px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  border: 0;
+  border-bottom-color: transparent;
+}
+
+span.round-tab {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  border-radius: 100px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 25px;
+}
+span.round-tab i{
+  color:#555555;
+}
+.wizard li.active span.round-tab {
+  background: #fff;
+  border: 2px solid #e75b00;
+  
+}
+.wizard li.active span.round-tab i{
+  color: #e75b00;
+}
+
+span.round-tab:hover {
+  color: #333;
+  border: 2px solid #333;
+}
+
+.wizard .nav-tabs > li {
+  width: 25%;
+}
+
+.wizard li:after {
+  content: " ";
+  position: absolute;
+  left: 46%;
+  opacity: 0;
+  margin: 0 auto;
+  bottom: 0px;
+  border: 5px solid transparent;
+  border-bottom-color: #e75b00;
+  transition: 0.1s ease-in-out;
+}
+.des_form_section_coach{
+width:100%!important;
+}
+.wizard li.active:after {
+  content: " ";
+  position: absolute;
+  left: 46%;
+  opacity: 1;
+  margin: 0 auto;
+  bottom: 0px;
+  border: 10px solid transparent;
+  border-bottom-color: #e75b00;
+}
+
+.wizard .nav-tabs > li a {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0;
+}
+
+  .wizard .nav-tabs > li a:hover {
+      background: transparent;
+  }
+
+.wizard .tab-pane {
+  position: relative;
+  padding-top: 50px;
+}
+
+.wizard h3 {
+  margin-top: 0;
+}
+
+@media( max-width : 585px ) {
+
+  .wizard {
+      width: 90%;
+      height: auto !important;
+  }
+
+  span.round-tab {
+      font-size: 16px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+  }
+
+  .wizard .nav-tabs > li a {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+  }
+
+  .wizard li.active:after {
+      content: " ";
+      position: absolute;
+      left: 35%;
+  }
+}
+.label1{
+line-height:45px;
+float:left
+}
+.forms_aling{
+margin:0px auto;
+width:75%;
+}
+.form-group{
+margin-bottom:30px!important;
+}
+.fields{
+height:45px;
+border-color:#a7a7a7
+}
+.dashboard_tab .nav-pills>li.active>a, .dashboard_tab .nav-pills>li.active>a:focus, .dashboard_tab .nav-pills>li.active>a:hover{
+background-color:#e75b00;
+border-top-color:#e75b00
+}
+.dashboard_tab .nav-pills>li>a{
+margin:0px 2px;
+background-color:#f2f2f2;
+}
+.well{
+background-color:#fff!important
+}
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side{
+background-color:#fff!important
+}
+.mandatory{
+color:red;
+}
+.btn_login_form{
+padding:10px 30px;
+background-color:#e75b00;
+}
+.btn_login_form:active:hover{
+background-color:#cc560a;
+border-color: #cc560a!important;
+}
+.btn_login_form:hover,.btn_login_form:focus,.btn_login_form:active{
+background-color:#cc560a;
+border-color:#cc560a!important;
+}
+.form_sec{
+width:67%;
+margin:0px auto;
+}
+.form_sec .form-group{
+text-align:left
+}
+.form_sec input[type="checkbox"]{
+padding-right:5px;
+display:table-cell;
+vertical-align:middle;
+}
+label{
+font-weight:400!important
+}
+.chech_box_services{
+display:block;
+padding-bottom:15px;
+}
+.chech_box_services1{
+margin-top:12px
+}
+body,h1,h2,h3,h4,h5,h6,p,a,span,label{
+font-family: 'Open Sans', sans-serif!important;
+}
+.chech_box_sec1{
+margin-top:12px
+}
+.transaction_heading{
+text-align:center;font-weight:bold;font-size:20px;margin-bottom:25px;
+}
+.alert_text {
+
+  color: red;
+  font-size: 12px;
+}
+.alert_field{
+border:1px solid red
+}
+.nav>li {
+  display: table-cell!important;
+}
+.nav-pills>li{
+  float: none!important;
+}
+.setup-panel h4{
+  text-transform: initial;
+  margin-bottom: 0px!important;
+}
+.setup-panel li a{
+  border-radius: 0px!important
+}
   .btn-group{
     width: 100%!important;
+  }
+  .setup-panel>li >a, .setup-panel>li >a:hover, .setup-panel>li >a:focus{
+    padding: 10px 10px!important
+  }
+  .setup-panel>li.active>a, .setup-panel>li.active>a:hover, .setup-panel>li.active>a:focus{
+    padding: 10px 10px!important
   }
   </style>
          <script>
@@ -112,300 +358,346 @@ $(document).ready(function() {
  <div class="clearfix"></div>
   <!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
-	<br/><br/><br/>
-		<form role="form">
-			<div class="des_form_section_coach">
-				<div class="box-body">
-            <h2 class="dashboard_boldtitle">MON COMPTE </h2>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="form-group">
-							<label for="exampleInputEmail1">Prénom <span class="mandatory">*</span></label>
-							<input ng-model="signUpObj.Coach_Fname" type="text" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Prénom">
-						</div>
-						
-					</div>
-							<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="form-group">
-							<label for="exampleInputEmail1">CV <span class="mandatory">*</span></label>
-							<div class="row">
-								<div class="col-lg-6">
-									<label class="btn-bs-file btn  btn-primary">
-									Ajouter	<span class="des_icon_btn"><i class="fa fa-cloud-upload" aria-hidden="true"></i></span>
-									<input type="file" id="coachResume"/>
-									</label>
+      <br/>
+        <form role="form">
+          <div class="des_form_section_coach">
+            <div class="box-body">
+              <div class="dashboard_tab">
+              <div class="row form-group">
+                <div class="col-xs-12">
+                    <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                        <li class="active"><a href="#step-1">
+                            <h4 class="list-group-item-heading">Informations personnelles</h4>
+                        </a></li>
+                        <li class=""><a href="#step-2">
+                            <h4 class="list-group-item-heading">Ensemble de compétences</h4>
+                        </a></li>
+                        <li class=""><a href="#step-3">
+                            <h4 class="list-group-item-heading">Détails de la transaction</h4>
+                        </a></li>
+                           
+                    </ul>
                 </div>
-                
-								<!-- /.col-lg-6 -->
-								<div class="col-lg-5" ng-click="downloadresume()">
-									<label class="btn-bs-file btn  btn-success">
-									Télécharger	<span class="des_icon_btn"><i class="fa fa-download" aria-hidden="true"></i></span>
-									
-									</label>
-								<!-- /input-group -->
+          <a href="#" style="float:right;margin-right:20px;" class="btn btn-primary"><i class="fa fa-edit"></i> MODIFIER</a>
+          </div>
+          </div>
+        <form class="container">
+    
+        <div class="row setup-content" id="step-1">
+            <div class="col-xs-12">
+                <div class="col-md-12 well ">
+                    
+          <div class="col-md-7 col-sm-7 col-xs-12">
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <label class="label1">Prénom <span class="mandatory">*</span></label>
                 </div>
-                <div class="col-lg-1"> 
-									<button ng-click="deleteResume()" type="button" class="btn btn-danger btn-xs" style="margin-left:-15px;margin-top: 1px;padding:5px 9px;"><i class="fa fa-trash"></i></button>
-								</div>
-                <!-- /.col-lg-6 -->
-                
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Prénom">
+                  <span style="display: block;" class="alert_text">Indiquez votre prénom.</span>
+                </div>
+                <div class="clearfix"></div>
               </div>
-              <span id='showfilename'><i aria-hidden="true"></i></span>
-              
-						</div>
-						
+            </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <label class="label1">Nom <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Nom">
+                  <span style="display: block;" class="alert_text">Indiquez votre nom.</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <label class="label1">E-mail <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="E-mail">
+                  <span style="display: block;" class="alert_text">Indiquez votre e-mail</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <label class="label1">Téléphone <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Téléphone mobile">
+                  <span style="display: block;" class="alert_text">Indiquez votre numéro de téléphone.</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <label class="label1">Description <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                  <textarea class="form-control fields alert_field" rows="5"></textarea>
+                  <span style="display: block;" class="alert_text">Indiquez votre description</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
           </div>
-          <div class="clearfix"></div>
-          <script>
-            $(document).ready(function () {
-            $('#coachResume').change(function (e) {
-            var fileName = e.target.files[0].name;
-            
-            $("#showfilename").text(fileName);
-            });
-            });
-            
-            </script>
-
-					<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="form-group">
-							<label for="exampleInputEmail1">Nom <span class="mandatory">*</span></label>
-							<input type="text" ng-model="signUpObj.Coach_Lname" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Nom">
-						</div>
-						
+          <div class="col-md-5 col-sm-5 col-xs-12">
+          <p style="text-align:center;font-size:15px;">  Photo de profil <span class="mandatory">*</span></p>
+             <div  style="border:2px solid #ccc;max-height:150px;width:150px;margin:20px auto">
+             <img src="../../../views/images/event1.png" class="img-responsive">
+            </div>
+            <center><input style="margin-left:20%"  type="file"/></center>
           </div>
-          
-          
-          <script>
-              $(document).ready(function() {
-                $('#multiselect,#multiselect1').multiselect({
-                  buttonWidth : '160px',
-                  includeSelectAllOption : true,
-                  nonSelectedText: 'Select an Option'
-                });
-              });
-              
-              function getSelectedValues() {
-                var selectedVal = $("#multiselect,#multiselect1").val();
-                for(var i=0; i<selectedVal.length; i++){
-                  function innerFunc(i) {
-                    setTimeout(function() {
-                      location.href = selectedVal[i];
-                    }, i*2000);
-                  }
-                  innerFunc(i);
-                }
-              }
-            </script>
-         
+        <div class="clearfix"></div>
+                   <center> <button id="activate-step-2" class="btn btn-primary btn-md btn_login_form">SAUVEGARDER ET CONTINUER</button> </center>
+        </div>
+        </div>
+        </div>
+    
+    </form>
+    
+    <form class="">
+    
+        <div class="row setup-content" id="step-2">
+            <div class="col-xs-12">
+                <div class="col-md-12 well text-center">
+                <div class="form_sec">
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">CV <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <label class="btn-bs-file btn  btn-primary">
+                      Ajouter	<span class="des_icon_btn"><i class="fa fa-cloud-upload" aria-hidden="true"></i></span>
+                      <input type="file" id="" >
+                      </label>
+                    </div>
+                    
+                    <!-- /.col-lg-6 -->
+                    <div class="col-lg-5" ng-click="downloadresume()">
+                      <label class="btn-bs-file btn  btn-success">
+                      Télécharger	<span class="des_icon_btn"><i class="fa fa-download" aria-hidden="true"></i></span>
+                      
+                      </label>
+                    <!-- /input-group -->
+                    </div>
+                    <div class="col-lg-1"> 
+                      <button ng-click="deleteResume()" type="button" class="btn btn-danger btn-xs" style="margin-left:-15px;margin-top:1px;padding:5px 9px;" ><i class="fa fa-trash"></i></button>
+                    </div>
+                    <!-- /.col-lg-6 -->
+                    
+                  </div>
+            <span style="display: block;" class="alert_text">Télécharger votre CV</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
             
             
-					<div class="col-md-6 col-sm-6 col-xs-12">
-							<div class="form-group">
-
-              <label for="exampleInputEmail1">Préstation de service <span class="mandatory">*</span></label>
-              <select ng-model="signUpObj.Coach_Services" id="multiselect" multiple="multiple">
-								<option>Cours Individuel</option>
-								<option>Cours Collectif</option>
-								<option>Cours Collectif Ondemand</option>
-								<option>Cours Collectif Club</option>
-								<option>Stage</option>
-								<option>Team Building </option>
-								<option>Animations</option>
-							
-                </select>
-							
-							<!-- <input type="text" ng-model="signUpObj.Coach_Services"  class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Enter Services"> -->
-						</div>
-          </div>
-        <!-- <div>
-          <div ng-dropdown-multiselect="" 
-          options="example14data" 
-          selected-model="example14model" 
-          checkboxes="true" 
-          extra-settings="example14settings"></div>
-        </div> -->
-					<div class="clearfix"></div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Image de profil <span class="mandatory">*</span></label>
-							<input type="file" id="coachImage">
-						</div>
-					</div>
-					
-					
-					<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script> -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Activité par ville <span class="mandatory">*</span></label>
-							<select style="width:100%!important" id="multiselect" multiple="multiple" ng-model="signUpObj.Active_City" >
-							  <option value ="Paris">Paris</option>
-							  <option value ="Marseille">Marseille</option>
-							  <option value ="Toulouse">Toulouse</option>
-                <option value ="Lyon"> Lyon</option>
-                <option value ="Lille">Lille</option>
-                <option value ="Nice">Nice</option>
-							</select>
-
-							<!-- <input ng-model="signUpObj.Active_City" type="text" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Enter  Activity by area ( Ville )"> -->
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Description <span class="mandatory">*</span></label><br/>
-							<textarea ng-model="signUpObj.Coach_Description" class="form-control coach_form_input_bg" rows="5" placeholder="Entrer la description"></textarea>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Disponibilité <span class="mandatory">*</span></label>
-							<!-- <input type="text" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Enter Availability & schedule"> -->
-							<div class="form-group">
-							<div class="row">
-								<div class="form-group">
-									<div class="col-md-6 col-sm-6 col-xs-12 date">
-										<div class="input-group input-append date" id="datePickerstart" ng-model="signUpObj.Availability_StartDate" >
-											<span class="input-group-addon add-on"  ><i class="fa fa-calendar"></i></span>
-											<input ng-model="signUpObj.Availability_StartDate"  type="text" class="form-control" name="date" placeholder="Partir de la date">
-										</div>
-									</div> 
-									<div class="col-md-6 col-sm-6 col-xs-12 date">
-										<div class="input-group input-append date" id="datePickerend">
-											<span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
-											<input ng-model="signUpObj.Availability_EndDate"  type="text" class="form-control" name="date" placeholder="À ce jour">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">Préstation de service <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="chech_box_services1">
+                <div class="form-group">
+                  <span class="chech_box_services"><input type="checkbox"/> Cours individuel</span> 
+                   <span class="chech_box_services"><input type="checkbox"/> Cours collectif</span>
+                   <span class="chech_box_services"><input type="checkbox"/> Cours collectif ondemand</span> 
+                   <span class="chech_box_services"><input type="checkbox"/> Cours collectif club</span> 
+                   <span class="chech_box_services"><input type="checkbox"/> Stage</span> 
+                   <span class="chech_box_services"><input type="checkbox"/> Team building</span> 
+                   <span class="chech_box_services"><input type="checkbox"/> Animations</span>
+                <span style="display: block;" class="alert_text">Sélectionnez votre prestation de service</span>
+                </div>
+                </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">Rayon <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                  <select class="form-control fields alert_field" style="height:45px">
+                    <option>Rayon	</option>
+                    <option>Rayon</option>
+                    <option>Rayon</option>
+                    <option>Rayon</option>
+                  </select>
+                <span style="display: block;" class="alert_text">Sélectionner le rayon</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">Prix  <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Prix par heure">
+                  <span style="display: block;" class="alert_text ">Indiquez votre Prix par heure</span>
+                </div>
+                
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Prix ​​pour 10 heures">
+                  <span style="display: block;" class="alert_text">Indiquez votre Prix  ​​pour 10 heures</span>
+                </div>
+                <div class="clearfix"></div>
+              </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Prix par heure <span class="mandatory">*</span></label>
-                    <input id='singlePrice' onkeyup="forTenPrice()" type="text" valid-number ng-model="signUpObj.Coach_Price" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer prix par heur">
-                  </div>
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">Transport <span class="mandatory">*</span></label>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Prix ​​pour 10 heures </label>
-                    <input id='tenPrice' type="text" ng-model="signUpObj.Coach_PriceX10" disabled  class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer prix ​​pour 10 plats">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="chech_box_services1">
+                  <label class="checkbox-inline"><input id="Car" type="checkbox" class="transport" name="transport" value="Car" checked="" ><span class="checkbox_txt">Voiture</span></label>
+                      <label class="checkbox-inline"><input id="Bike" type="checkbox" class="transport" name="transport" value="Bike" ><span class="checkbox_txt">Moto</span></label>
+                      <label class="checkbox-inline"><input id="Train" type="checkbox" class="transport" name="transport" value="Train" ><span class="checkbox_txt">Train</span></label>
+                      <label class="checkbox-inline"><input id="Bus" type="checkbox" class="transport" name="transport" value="Bus" ><span class="checkbox_txt">Bus</span></label>
+              <span style="display: block;" class="alert_text">Sélectionnez votre transport</span>
+                </div>
+                <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+        
+            
+            
+    <!--<form></form> --> 
+                    
+                    <button id="activate-step-2" class="btn btn-primary btn-md btn_login_form">SAUVEGARDER ET CONTINUER</button>
+            </div>
+                </div>
+            </div>
+        </div>
+    
+    </form>
+    
+      <form class="">
+    
+        <div class="row setup-content" id="step-3">
+          <div class="col-xs-12">
+            <div class="col-md-12 well text-center">
+            <div class="form_sec">
+              
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label class="label1">Paiement  <span class="mandatory">*</span></label>
                   </div>
+                  <div class="col-md-8 col-sm-8 col-xs-12 chech_box_sec1">
+                    <label class="checkbox-inline"><input type="checkbox" value="" checked=""><span class="checkbox_txt">Cheque</span></label>
+                    <label class="checkbox-inline"><input type="checkbox" value=""><span class="checkbox_txt">Virement enligne </span></label>
+                    <label class="checkbox-inline"><input type="checkbox" value=""><span class="checkbox_txt">Virement banque</span></label>
+                    <span style="display: block;" class="alert_text">Sélectionnez votre méthode de paiement</span>
+                  </div>
+                  <div class="clearfix"></div>
                 </div>
               </div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="form-group">
-						
-							<label for="exampleInputEmail1">E-mail <span class="mandatory">*</span></label>
-							<input ng-model="signUpObj.Coach_Email" type="text" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Email">
-						</div>
-						
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="form-group">
-                  <label for="exampleInputEmail1">Transport <span class="mandatory">*</span></label><br>
-                  <label class="checkbox-inline"><input id='Car' type="checkbox" class='transport' name = 'transport' value="Car" checked><span class="checkbox_txt">Voiture</span></label>
-                  <label class="checkbox-inline"><input id ='Bike' type="checkbox" class='transport' name = 'transport' value="Bike"><span class="checkbox_txt">Moto</span></label>
-                  <label class="checkbox-inline"><input id ='Train' type="checkbox" class='transport' name = 'transport' value="Train"><span class="checkbox_txt">Train</span></label>
-                  <label class="checkbox-inline"><input id ='Bus' type="checkbox" class='transport' name = 'transport' value="Bus"><span class="checkbox_txt">Bus</span></label>
-                    <br/><br/>
-                    
-                    
-                  </div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="form-group">
-							<label for="exampleInputEmail1">Téléphone <span class="mandatory">*</span></label>
-							<input type="text" valid-number minlength="10" maxlength="10" ng-model="signUpObj.Coach_Phone" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Telephone">
-						</div>
-					
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-					
-					</div>
-					
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-					<label for="exampleInputEmail1">Paiement <span class="mandatory">*</span></label><br>
-          <label class="checkbox-inline"><input id='Cheque' type="checkbox" class='payment' name = 'payment' value="Cheque" ><span class="checkbox_txt">Cheque</span></label>
-          <label class="checkbox-inline"><input id='Online Transfer' type="checkbox" class='payment' name = 'payment' value="Online Transfer"><span class="checkbox_txt">Virement enligne</span></label>
-          <label class="checkbox-inline"><input id='Bank Transfer' type="checkbox" class='payment' name = 'payment' value="Bank Transfer"><span class="checkbox_txt">Virement banque</span></label>
-						</div>
-          </div><div class="clearfix"></div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="form-group">
-                  <label for="exampleInputEmail1">Ville <span class="mandatory">*</span></label>
-                
-              <select class="form-control" ng-model="signUpObj.Coach_City">
-                <option value="" selected>Select</option>
-                <option value ="Paris">Paris</option>
-							  <option value ="Marseille">Marseille</option>
-							  <option value ="Toulouse">Toulouse</option>
-                <option value ="Lyon"> Lyon</option>
-                <option value ="Lille"> Lille</option>
-                <option value ="Nice"> Nice</option>
-              </select>
-                </div>
-                
+              <div class="col-md-12">
+                <p class="transaction_heading">Coordonnées bancaires</p>
               </div>
-              <div class="clearfix"></div>
-              <br/><br/><br/>
-          <div class="col-xs-12">	<center><h4>Coordonnées bancaires</h4></center></div>
-          <div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12">
-					
-						<div class="form-group">
-							<label for="exampleInputEmail1">Numéro de compte <span class="mandatory">*</span></label>
-							<input type="text" ng-model="signUpObj.Coach_Bank_ACCNum" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Account Number">
-						</div>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Nom de la banque <span class="mandatory">*</span></label>
-              <input type="text" ng-model="signUpObj.Coach_Bank_Name" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Account Number">
-							<!-- <select class="form-control coach_form_input_bg" ng-model="signUpObj.Coach_Bank_Name">
-								<option>sélectionner</option>
-								<option>Nom de la banque</option>
-								<option>Nom de la banque</option>
-								<option>Nom de la banque</option>
-								<option>Nom de la banque</option>
-							</select> -->
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <label class="label1">Nom de la banque <span class="mandatory">*</span></label>
+                  </div>
+                  <div class="col-md-8 col-sm-8 col-xs-12">
+                    <input type="text" class="form-control fields alert_field" placeholder="Nom de la banque">
+                    <span style="display: block;" class="alert_text">Indiquez votre nom de la banque</span>	
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">Numéro de compte <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Numéro de compte ">
+                  <span style="display: block;" class="alert_text">Indiquez votre numéro de compte</span>	
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">Code banque <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Code banque">
+                  <span style="display: block;" class="alert_text">Indiquez votre code banque</span>	
+                  
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label class="label1">Ville de la banque <span class="mandatory">*</span></label>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                  <input type="text" class="form-control fields alert_field" placeholder="Ville de la banque ">
+                  <span style="display: block;" class="alert_text">Indiquez votre ville de la banque</span>	
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            
+              
+      <!--<form></form> --> 
+              
+              <button id="activate-step-2" class="btn btn-primary btn-md btn_login_form">SOUMETTRE</button>
+            </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Ville de la banque <span class="mandatory">*</span></label>
-              <input type="text" ng-model="signUpObj.Coach_Bank_City" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Account Number">
-							<!-- <select class="form-control coach_form_input_bg" >
-								<option>sélectionner</option>
-								<option>Ville de la banque</option>
-								<option>Ville de la banque</option>
-								<option>Ville de la banque</option>
-								<option>Ville de la banque</option>
-								<option>Ville de la banque</option>
-							</select> -->
-						</div>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Code banque <span class="mandatory">*</span></label>
-							<input type="text" ng-model="signUpObj.Branch_Code" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Code banque">
-						</div>
-						</div>
-						
-					</div>
-					
-					
-				</div><br></br>
-			<center>
-				<div class="form_buttons">
-					<!-- <a data-toggle="modal" data-target="#myModal_edit" class="btn btn-primary des_save_btn">Modifier</a> -->
-					<a   class="btn btn-success des_save_btn" ng-click = 'saveCoach()'>{{buttonText}}</a>
-					<a ng-click="cancelChanges()" class="btn btn-default des_cancel_btn">Annuler</a>
-				</div>
-			</center>
-			</div>
-		</form>
-		<br/><br/><br/>
-	</div> 
+        </div>
+    
+      </form>
+            </div>
+          <!-- <center>
+            <div class="form_buttons">
+              <a href="#" class="btn btn-success des_save_btn">Enregistrer</a>
+              <a href="#" class="btn btn-default des_cancel_btn">Annuler</a>
+            </div>
+          </center> -->
+          </div>
+        </form>
+        <br/>
+      </div> 
   <div id="myModal_save" class="modal fade" role="dialog">
     <div class="modal-dialog">
   
@@ -670,6 +962,80 @@ $(document).ready(function() {
 
   }
   </script>
+<script>
 
+    // Activate Next Step
+    
+    $(document).ready(function() {
+        
+        var navListItems = $('ul.setup-panel li a'),
+            allWells = $('.setup-content');
+    
+        allWells.hide();
+    
+        navListItems.click(function(e)
+        {
+            e.preventDefault();
+            var $target = $($(this).attr('href')),
+                $item = $(this).closest('li');
+            
+            if (!$item.hasClass('disabled')) {
+                navListItems.closest('li').removeClass('active');
+                $item.addClass('active');
+                allWells.hide();
+                $target.show();
+            }
+        });
+        
+        $('ul.setup-panel li.active a').trigger('click');
+        
+        // DEMO ONLY //
+        $('#activate-step-2').on('click', function(e) {
+            $('ul.setup-panel li:eq(1)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-2"]').trigger('click');
+            $(this).remove();
+        })
+        
+        $('#activate-step-3').on('click', function(e) {
+            $('ul.setup-panel li:eq(2)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-3"]').trigger('click');
+            $(this).remove();
+        })
+        
+        $('#activate-step-4').on('click', function(e) {
+            $('ul.setup-panel li:eq(3)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-4"]').trigger('click');
+            $(this).remove();
+        })
+        
+        $('#activate-step-3').on('click', function(e) {
+            $('ul.setup-panel li:eq(2)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-3"]').trigger('click');
+            $(this).remove();
+        })
+    });
+    
+    
+    // Add , Dlelete row dynamically
+    
+         $(document).ready(function(){
+          var i=1;
+         $("#add_row").click(function(){
+          $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='sur"+i+"' type='text' placeholder='Surname'  class='form-control input-md'></td><td><input  name='email"+i+"' type='text' placeholder='Email'  class='form-control input-md'></td>");
+    
+          $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+          i++; 
+      });
+         $("#delete_row").click(function(){
+           if(i>1){
+         $("#addr"+(i-1)).html('');
+         i--;
+         }
+       });
+    
+    });
+    
+    
+    </script>
   
 </html>

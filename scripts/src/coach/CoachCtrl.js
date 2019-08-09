@@ -10,12 +10,15 @@ $scope.commonflag = true;
 $scope.emailflag = true;
 
 
+
    if (sessionStorage.getItem("coachLoginFlag") == 'Y') {
       $location.path("OhMyTennis/coach_dashboard/")
-   }
+   }    
 
  
    $scope.coachlogin = function () {
+      $location.path("OhMyTennis/coach_dashboard/")
+      return;
      // console.log("in coach login")
       if ($scope.CoachConfig.Coach_Email == "" || $scope.CoachConfig.Coach_Email == undefined) {
          alert("Please enter user email")

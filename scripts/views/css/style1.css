@@ -239,7 +239,9 @@ background: linear-gradient(to bottom left, #09B4C8, #1EC2D4);
 	vertical-align:middle;
 }
 .dark-blue1 {
-	
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	min-height:215px;
     background-color: #fff;
 }
@@ -249,11 +251,11 @@ background: linear-gradient(to bottom left, #09B4C8, #1EC2D4);
 /* dashboard */
 /****************************************************** course form **************************************************/
 .des_form_section_coach{
--webkit-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+/* -webkit-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75); */
 	padding: 20px;
-    width: 88%;
+    width: 100%;
     background-color: #fff;
     margin: 0px auto;
 }
@@ -275,8 +277,13 @@ box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
 		background-color:#ffffff;
 	}
 	.form-group{
-		margin-bottom:15px!important;
-	}
+		margin-bottom:30px !important;
+        font: 400 14px 'Open Sans',Arial,sans-serif;
+    }
+    .des_form_section_coach h4 {    
+        font: bold 16px 'Open Sans',Arial,sans-serif;
+        margin-bottom: 25px;
+    }
 	.form_buttons a{
 		margin-left:8px;
 		padding:4px 30px;
@@ -285,9 +292,8 @@ box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
 		background-color:#fff!important;
 		color:#000
 	}
-	.box-body label{
-		font-size: 15px;
-
+	.box-body label{   
+        font: 400 14px 'Open Sans',Arial,sans-serif;
 	}
 	.des_form_section_coach  input[type="checkbox"]{
 		/* margin-top:0px; */
@@ -331,6 +337,34 @@ box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
     label{
 		font-family: Montserrat;
 		font-size:14px;
-		font-weight:bold;
+        font-weight:bold;
+        font: 400 14px 'Open Sans',Arial,sans-serif;
 	}
 /****************************************************** common admin **************************************************/
+
+.fields {
+    height: 45px;
+    border-color: #a7a7a7;
+}
+.form_sec{
+    width: 67%;
+    margin: 0px auto;
+}
+.des_page_heading{
+display: none;
+
+}
+.content-wrapper{
+    background-color: #fff!important
+}
+.label1 {
+    line-height: 45px!important;
+    float: left;
+}
+
+.check_box_fields{
+    margin-top: 10px;
+}
+.well{
+    background-color: #fff!important;
+}

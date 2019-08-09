@@ -5,6 +5,17 @@
   <head>
 
   <style>
+    .alert_text {
+
+color: red;
+font-size: 12px;
+}
+.alert_field{
+border:1px solid red
+}
+    .course_edit_btn:hover{
+      background-color: #367fa9!important;
+    }
 	#result{
 				display: block;
 				position: relative;
@@ -93,11 +104,18 @@ $(document).ready(function() {
   <!-- Left side column. contains the logo and sidebar -->
  <div class="clearfix"></div>
   <!-- Content Wrapper. Contains page content -->
+  
 	<div class="content-wrapper">
-	<br/><br/><br/>
+  <br/><br/><br/>
+  
 		<form role="form">
+       
 			<div class="des_form_section_coach">
-				<div class="box-body">
+        
+          <div class="col-md-12 well ">
+				<div class="form_sec">
+          
+            <div class="box-body">
 				<!-- <div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="form-group">
 						
@@ -139,43 +157,84 @@ $(document).ready(function() {
 							</div>
 						</div>
 					</div> -->
-				
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Availability <span class="mandatory">*</span></label><br>
-							<a class="btn btn-defauly" style="background-color:#e75b00;color:#fff" data-toggle="modal" data-target="#available" >Availability</a>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
+          
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <label for="exampleInputEmail1" class="label1">Availability <span class="mandatory">*</span></label><br>
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                  <a class="btn btn-defauly" style="background-color:#e75b00;color:#fff" data-toggle="modal" data-target="#available" >Availability</a>
+                </div>
+              <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <label for="exampleInputEmail1" class="label1">Mode de transport <span class="mandatory">*</span></label><br>
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-12 check_box_fields">
+                  <label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="bus"><span class="checkbox_txt">Bus</span></label>
+                  <label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="train"><span class="checkbox_txt">Train</span></label>
+                  <label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="car"><span class="checkbox_txt">Car</span></label>
+                  <span style="display: block;" class="alert_text">Sélectionnez votre transport</span>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <label for="exampleInputEmail1" class="label1">Description <span class="mandatory">*</span></label><br>
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                  <textarea class="form-control coach_form_input_bg fields alert_field" ng-model="dataConfig.Course_Description" rows="5" placeholder="Description"></textarea>
+                  <span style="display: block;" class="alert_text">Indiquez votre description</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <label class="label1">Prix  <span class="mandatory">*</span></label>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <input type="text" class="form-control fields alert_field" placeholder="Prix par heure">
+                <span style="display: block;" class="alert_text">Indiquez votre prix par heure</span>
+              </div>
+              
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <input type="text" class="form-control fields alert_field" placeholder="Prix &#8203;&#8203;pour 10 heures">
+                <span style="display: block;" class="alert_text">Indiquez votre prix pour 10 heures</span>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+					<!-- <div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="form-group">
 							<label for="exampleInputEmail1">Images <span class="mandatory">*</span></label>
 							<input type="file" id="courseimage" >
 						</div>
-					</div>
-					<div class="clearfix"></div>					
+					</div> -->					
 					
-					<div class="col-md-6 col-sm-6 col-xs-12">
+					<!-- <div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="form-group">
 							<label for="exampleInputEmail1" style="margin-bottom:10px">possibilité d'enchainer 2 course de suite <span class="mandatory">*</span></label><br/>
 							<input type="checkbox"/> Cours 1
 							<input type="checkbox"/> Cours 2
 						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group" >
-						<label for="exampleInputEmail1" style="margin-bottom:10px;">Mode de transport <span class="mandatory">*</span></label><br/>
-							<label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="bus"><span class="checkbox_txt">Bus</span></label>
-							<label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="train"><span class="checkbox_txt">Train</span></label>
-							<label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="car"><span class="checkbox_txt">Car</span></label>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
+          </div> -->
+          
+				
+					<!-- <div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="form-group">
 							<label for="exampleInputEmail1">Endroit <span class="mandatory">*</span></label>
 							<input type="text" ng-model="dataConfig.Course_Place" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer le endroit">
 						</div>
-					</div>
+					</div> -->
 					
 					
 					<!-- <div class="col-md-6 col-sm-6 col-xs-12">
@@ -202,42 +261,35 @@ $(document).ready(function() {
                   </div>
                 </div>
           </div> -->
-					
-					
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="form-group">
-									<label for="exampleInputEmail1">Prix par heure <span class="mandatory">*</span></label>
-									<input type="text" ng-model="dataConfig.Course_Price" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Prix par heure">
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="form-group">
-									<label for="exampleInputEmail1">Prix ​​pour 10 plats <span class="mandatory">*</span></label>
-									<input type="text" ng-model="dataConfig.Course_Price" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer Prix ​​pour 10 plats">
-								</div>
-							</div>
-						</div>
-						
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label>La description <span class="mandatory">*</span></label>
-							<textarea class="form-control coach_form_input_bg" ng-model="dataConfig.Course_Description" rows="5" placeholder="Entrer la description"></textarea>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-					<div class="form-group">
-							<label for="exampleInputEmail1">Technique fournie <span class="mandatory">*</span></label>
-							<input type="text" ng-model="dataConfig.Course_Provided" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer technique fournie">
-						</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Vidéo <span class="mandatory">*</span></label>
-								<!-- <input type="text" ng-model="dataConfig.Course_Video" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer vidéo"> -->
-								<input type="file">
-							</div>
-					</div>
+					<div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label for="exampleInputEmail1" class="label1">Technique fournie <span class="mandatory">*</span></label><br>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <input type="text" ng-model="dataConfig.Course_Provided" class="form-control coach_form_input_bg fields alert_field" id="exampleInputEmail1" placeholder="Entrer technique fournie">
+                    <span style="display: block;" class="alert_text">Indiquez votre technique fournie</span>
+                  </div>
+                  <div class="clearfix"></div>
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="form-group">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <label for="exampleInputEmail1" class="label1">Vidéo <span class="mandatory">*</span></label><br>
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-12">
+                    <input type="text" class="form-control fields alert_field" placeholder="EmbedURL incorporée">
+                    <span style="display: block;" class="alert_text">Intégrer votre url</span>
+                  </div>
+                  <div class="col-md-1 col-sm-1 col-xs-12">
+                     <a href="#" class="btn btn-primary course_edit_btn" style="margin-top: 6px"><i class="fa fa-plus"></i></a>
+                    </div>
+              </div>
+          </div>
+         
+				
 				
 					
 					
@@ -245,12 +297,14 @@ $(document).ready(function() {
 				</div><br/><br/>
 			<center>
 				<div class="form_buttons">
-					<a data-toggle="modal" data-target="#myModal_edit_course" class="btn btn-primary des_save_btn">Edit</a>
+					<a data-toggle="modal" data-target="#myModal_edit_course" class="btn btn-primary des_save_btn course_edit_btn">Modifier</a>
 					<a data-toggle="modal" data-target="#myModal_save_course" ng-click="savecourse()" class="btn btn-success des_save_btn">Enregistrer</a>
 					<a href="#" class="btn btn-default des_cancel_btn">Annuler</a>
 				</div>
 			</center>
-			</div>
+      </div>
+    </div>
+    </div>
 		</form>
 		<br/><br/><br/>
 	</div> 
@@ -303,61 +357,75 @@ $(document).ready(function() {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Availability</h4>
+        <h4 class="modal-title">Availability</h4><br/>
+        
+        <div class="form-group">
+          <label style="line-height: 40px" class="control-label col-sm-5" for="company">Sélectionnez la semaine</label>
+          <div class="col-sm-6 col-md-6">
+            <select id="company" class="form-control">
+              <option>Sélectionner</option>
+              <option>Semaine 1</option>
+              <option>Semaine 2</option>
+              <option>Semaine 3</option>
+            </select> 
+          </div>
+        </div>
+         <p></p> 
+        
       </div>
       <div class="modal-body">
       <table style="width:100%">
 							  <tr>
-								<th>Day</th>
-								<th>Morning</th> 
-								<th>Afternoon</th>
-								<th>Evening</th>
-								<th>All</th>
+								<th>Journée</th>
+								<th style="text-align:center">Matin<br/><span style="color:#565656;font-size: 12px">(9 - 12)</span></th> 
+								<th style="text-align:center">Après midi<br/><span style="color:#565656;font-size: 12px">(1 PM - 5 PM)</span></th>
+								<th style="text-align:center">Soirée<br/><span style="color:#565656;font-size: 12px">(5 PM-9 PM)</span></th>
+								<th style="text-align:center">Toute</th>
 							  </tr>
 							  <tr>
-								<td><b>Monday</b></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-							  </tr>
-							  <tr>
-								<td><b>Tuesday</b></td>
+								<td><b>Lundi</b></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
-								<td><b>Wednesday</b></td>
+								<td><b>Mardi</b></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
-								<td><b>Thursday</b></td>
+								<td><b>Mercredi</b></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
-								<td><b>Friday</b></td>
+								<td><b>Jeudi</b></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
-								<td><b>Saturday</b></td>
+								<td><b>Vendredi</b></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							  <tr>
-								<td><b>Sunday</b></td>
+								<td><b>Samedi</b></td>
+								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox"/></td>
+								<td style="text-align:center"> <input type="checkbox"/></td>
+							  </tr>
+							  <tr>
+								<td><b>Dimanche</b></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>

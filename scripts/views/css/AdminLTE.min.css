@@ -1470,7 +1470,8 @@ box-shadow: 11px 0px 10px -12px rgba(0,0,0,0.75);
 .form-control {
     border-radius: 3px;
     box-shadow: none;
-    border-color: #d2d6de
+    border-color: #d2d6de;
+    color: #555 !important;
 }
 
 .form-control:focus {

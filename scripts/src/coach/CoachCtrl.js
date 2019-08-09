@@ -10,9 +10,10 @@ $scope.commonflag = true;
 $scope.emailflag = true;
 
 
+
    if (sessionStorage.getItem("coachLoginFlag") == 'Y') {
       $location.path("OhMyTennis/coach_dashboard/")
-   }
+   }    
 
 
    $scope.clearValidation = function () {
@@ -29,10 +30,7 @@ $scope.emailflag = true;
 
  
    $scope.coachlogin = function () {
-      $scope.clearValidation();
 
-      console.log('dddd');
-   
       if ($scope.CoachConfig.Coach_Email == "" || $scope.CoachConfig.Coach_Email == undefined) {
          document.getElementById('Coach_Email').style.display = 'block';
          $("#email").addClass("alert_field");

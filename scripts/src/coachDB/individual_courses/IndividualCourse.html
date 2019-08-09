@@ -5,6 +5,17 @@
   <head>
 
   <style>
+    .alert_text {
+
+color: red;
+font-size: 12px;
+}
+.alert_field{
+border:1px solid red
+}
+    .course_edit_btn:hover{
+      background-color: #367fa9!important;
+    }
 	#result{
 				display: block;
 				position: relative;
@@ -93,56 +104,15 @@ $(document).ready(function() {
   <!-- Left side column. contains the logo and sidebar -->
  <div class="clearfix"></div>
   <!-- Content Wrapper. Contains page content -->
+  
 	<div class="content-wrapper">
-	<br/><br/><br/>
+  <br/><br/><br/>
+  
 		<form role="form">
+       
 			<div class="des_form_section_coach">
-				<div class="box-body">
-			
-					<div class="clearfix"></div>
-					
-				
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Availability <span class="mandatory">*</span></label><br>
-							<a class="btn btn-defauly" style="background-color:#e75b00;color:#fff" data-toggle="modal" data-target="#available" >Availability</a>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Images <span class="mandatory">*</span></label>
-							<input type="file" id="courseimage" >
-						</div>
-					</div>
-					<div class="clearfix"></div>					
-					
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1" style="margin-bottom:10px">possibilité d'enchainer 2 course de suite <span class="mandatory">*</span></label><br/>
-							<input type="checkbox"/> Cours 1
-							<input type="checkbox"/> Cours 2
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group" >
-						<label for="exampleInputEmail1" style="margin-bottom:10px;">Mode de transport <span class="mandatory">*</span></label><br/>
-							<label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="bus"><span class="checkbox_txt">Bus</span></label>
-							<label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="train"><span class="checkbox_txt">Train</span></label>
-							<label class="checkbox-inline"><input style="margin-bottom:3px;" type="checkbox" name='transport' class='transport' value="car"><span class="checkbox_txt">Car</span></label>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Endroit <span class="mandatory">*</span></label>
-							<input type="text" ng-model="dataConfig.Course_Place" class="form-control coach_form_input_bg" id="exampleInputEmail1" placeholder="Entrer le endroit">
-						</div>
-					</div>
-					
-					
-				
-					
-					
+
+		
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-12">
@@ -177,6 +147,7 @@ $(document).ready(function() {
 								<input type="file">
 							</div>
 					</div>
+
 				
 					
 					
@@ -184,12 +155,14 @@ $(document).ready(function() {
 				</div><br/><br/>
 			<center>
 				<div class="form_buttons">
-					<a data-toggle="modal" data-target="#myModal_edit_course" class="btn btn-primary des_save_btn">Edit</a>
+					<a data-toggle="modal" data-target="#myModal_edit_course" class="btn btn-primary des_save_btn course_edit_btn">Modifier</a>
 					<a data-toggle="modal" data-target="#myModal_save_course" ng-click="savecourse()" class="btn btn-success des_save_btn">Enregistrer</a>
 					<a href="#" class="btn btn-default des_cancel_btn">Annuler</a>
 				</div>
 			</center>
-			</div>
+      </div>
+    </div>
+    </div>
 		</form>
 		<br/><br/><br/>
 	</div> 
@@ -242,73 +215,33 @@ $(document).ready(function() {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Availability</h4>
+        <h4 class="modal-title">Availability</h4><br/>
+        
+        <div class="form-group">
+          <label style="line-height: 40px" class="control-label col-sm-5" for="company">Sélectionnez la semaine</label>
+          <div class="col-sm-6 col-md-6">
+            <select id="company" class="form-control">
+              <option>Sélectionner</option>
+              <option>Semaine 1</option>
+              <option>Semaine 2</option>
+              <option>Semaine 3</option>
+            </select> 
+          </div>
+        </div>
+         <p></p> 
+        
       </div>
       <div class="modal-body">
       <table style="width:100%">
 							  <tr>
-								<th>Day</th>
-								<th>Morning</th> 
-								<th>Afternoon</th>
-								<th>Evening</th>
-								<th>All</th>
+								<th>Journée</th>
+								<th style="text-align:center">Matin<br/><span style="color:#565656;font-size: 12px">(9 - 12)</span></th> 
+								<th style="text-align:center">Après midi<br/><span style="color:#565656;font-size: 12px">(1 PM - 5 PM)</span></th>
+								<th style="text-align:center">Soirée<br/><span style="color:#565656;font-size: 12px">(5 PM-9 PM)</span></th>
+								<th style="text-align:center">Toute</th>
 							  </tr>
 							  <tr>
-								<td><b>Monday</b></td>mon
-								<td style="text-align:center"> <input name='mon' type="checkbox" ng-model = 'availabilityObj.Mon_mor' ng-true-value="'Y'" ng-false-value="'N'" /></td>
-								<td style="text-align:center"> <input name='mon' type="checkbox"ng-model = 'availabilityObj.Mon_af' ng-true-value="'Y'" ng-false-value="'N'"  /></td>
-								<td style="text-align:center"> <input name='mon' type="checkbox" ng-model = 'availabilityObj.Mon_eve' ng-true-value="'Y'" ng-false-value="'N'" /></td>
-								<td style="text-align:center"> <input id="all_check" type="checkbox"  ng-model="chkall" onchange='checkAll()' ng-true-value="'mon'"   ng-false-value="'mon'"/></td>
-                </tr>
-                <script>
 
-
-                  function checkAll()
-                  {
-                    console.log('d');
-                  }
-                
-                </script>
-							  <tr>
-								<td><b>Tuesday</b></td>
-								<td style="text-align:center"> <input name='tue' type="checkbox" ng-model = 'availabilityObj.Tue_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input name='tue' type="checkbox" ng-model = 'availabilityObj.Tue_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input name='tue' type="checkbox"ng-model = 'availabilityObj.Tue_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input ' type="checkbox" ng-model="chkall1" ng-change='checkAll(tue)'/></td>
-							  </tr>
-							  <tr>
-								<td><b>Wednesday</b></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Wed_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Wed_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox"ng-model = 'availabilityObj.Wed_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-							  </tr>
-							  <tr>
-								<td><b>Thursday</b></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Thu_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Thu_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Thu_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-							  </tr>
-							  <tr>
-								<td><b>Friday</b></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Fri_mor' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Fri_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Fri_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox" /></td>
-							  </tr>
-							  <tr>
-								<td><b>Saturday</b></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sat_mor' ng-true-value="'Y'" ng-false-value="'N'" /></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sat_af' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sat_eve' ng-true-value="'Y'" ng-false-value="'N'"/></td>
-								<td style="text-align:center"> <input type="checkbox"/></td>
-							  </tr>
-							  <tr>
-								<td><b>Sunday</b></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sun_mor' ng-true-value="'Y'" ng-false-value="'N'" /></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sun_af' ng-true-value="'Y'" ng-false-value="'N'" /></td>
-								<td style="text-align:center"> <input type="checkbox" ng-model = 'availabilityObj.Sun_eve' ng-true-value="'Y'" ng-false-value="'N'" /></td>
 								<td style="text-align:center"> <input type="checkbox"/></td>
 							  </tr>
 							</table>

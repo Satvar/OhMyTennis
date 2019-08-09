@@ -68,9 +68,10 @@
 				<div class="des_coachform_bg">
 					<div class="row">
 					<h4 class="blackbold_title">Recherchez vos coachs</h4>
-						<div class="col-md-6 no_paddleft des_mpaddright no_paddright col-sm-6 col-xs-12">
+					<div class="col-md-12 no_paddleft no_paddright col-sm-6 col-xs-12">
+						<div class="col-md-6 no_paddleft">
 							<label>Cours</label>
-							<select ng-model="searchcityobj.course" class="form-control select_drop_custom1  coach_form_input_bg">
+							<select ng-model="searchcityobj.course" class="form-control select_drop_custom1 cust_orangeselect coach_form_input_bg">
 								<option value="">Select your course</option>
 								<option value="Sélectionner">Sélectionner</option>
 								<option value="Coursindividuel">Cours individuel</option>
@@ -79,7 +80,11 @@
 								<option value="Constructiondéquipe">Construction d'équipe</option>
 							</select>
 							
-							<label>Horaires</label>
+						</div>
+						<div class="col-md-6 no_paddleft">
+							<label>Date</label>
+						
+							<!--<label>Horaires</label>
 							<div class="~row">
 								
 								<div class="col-md-5 no_paddleft no_paddright col-sm-5 col-xs-5">
@@ -108,29 +113,70 @@
 										  </div>
 										</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 des_mpaddleft no_paddright no_paddleft col-xs-12">
-						
-							<label>Date</label>
+							</div>-->
+
 							<div class="form-group">
-									<div class="col-md-12 col-sm-12 col-xs-12 date no_padding">
-										<div class="input-group input-append date d-block" id="datePickerstart1">
-											<span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
-											<input type="text" ng-model="searchcityobj.coursedate" class="form-control " name="date" placeholder="Partir de la date" />
-										</div>
+								<div class="col-md-12 col-sm-12 col-xs-12 date no_padding">
+									<div class="input-group input-append date d-block" id="datePickerstart1">
+										<span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
+										<input type="text" ng-model="searchcityobj.coursedate" class="form-control " name="date" placeholder="Partir de la date" />
 									</div>
-									
+								</div>
+								
+						</div>
+
+						</div>
+					</div>
+							
+						<div class="col-md-12 no_padding">
+							<div class="~row">
+							<div class="col-md-4 no_paddleft">
+							<label>Session</label>								
+							<select class="form-control cust_orangeselect">
+							<option value="Cours particuliers">Sélectionnez une session</option>
+							<option value="Course 1">Matin</option>
+							<option value="Course 2">Après midi</option>
+							<option value="Course 3">Soir</option>
+							</select>
 							</div>
+							<div class="col-md-4 no_paddleft">
+							
+
 							<label>Ville</label>
-							<select ng-model="searchcityobj.ville" class="form-control">
-							  <option  value="" selected>Select Your City</option>
-							  <option ng-repeat="obj in cities track by $index" value="{{obj}}">{{obj}}</option>
-							  <!-- <option value="option 1">option 1</option>
-							  <option value="option 2">option 2</option>
-							  <option value="option 3">option 3</option> -->
+							  <select class="form-control selectpicker" id="select-country" data-live-search="true">
+								
+								<option value="SL">Sélectionnez votre ville</option>
+						  <option data-tokens="PA">Paris</option>
+						  <option data-tokens="MA">Marseille</option>
+						  <option data-tokens="LY">Lyon</option>
+						  <option data-tokens="TOU">Toulouse</option>
+						  <option data-tokens="NI">Nice</option>
+						  <option data-tokens="NA">Nantes</option>
+						  <option data-tokens="ST">Strasbourg</option>
+						  <option data-tokens="MP">Montpellier</option>
+						  <option data-tokens="BO">Bordeaux</option>
+						  <option data-tokens="LI">Lille</option>
+						  <option data-tokens="RN">Rennes</option>
+						  <option data-tokens="RE">Reims</option>
+						  <option data-tokens="HA">Le Havre</option>
+						  <option data-tokens="SE">Saint-Étienne</option>
+						  <option data-tokens="TO">Toulon</option>
+						  <option data-tokens="GR">Grenoble</option>
 							</select>
 						</div>
+						<div class="col-md-4 no_paddleft">
+							<label>Rayon</label>
+							<select class="form-control js-example-basic-single cust_orangeselect" name="state">
+							  <option value="Cours particuliers">Sélectionnez le rayon</option>
+							  <option value="5 km">5 km</option>
+							  <option value="10 km">10 km</option>
+							  <option value="15 km">15 km</option>
+							</select>
+						</div>
+						</div>
+						</div>
+						
+					</div>
 						<div class="clearfix"></div>
 						<div style="text-align:center; margin-top:16px;">
 						<a ng-click="searchcoachfrompage()" class="btn orange_borderbtn">trouver</a>
@@ -154,7 +200,7 @@
 			<div class="col-md-3 col-sm-4 col-xs-12 text-right">
 				<label>Tri Par</label>
 				<select>
-				  <option value="Ville">Ville</option>
+				  <option value="code postal">code postal</option>
 				  <option value="option 1">option 1</option>
 				  <option value="option 2">option 2</option>
 				  <option value="option 3">option 3</option>
@@ -189,8 +235,8 @@
 					<div class="clearfix"></div>
 					<div class="des_grey_overlay">
 						<div class="des_overlay_content">
-							<div class="padding_bot"><a href="#" class="btn orange_btn">RESERVER UN COURS</a></div>
-							<div class="padding_bot"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
+							<!--<div class="padding_bot"><a href="#" class="btn orange_btn">RESERVER UN COURS</a></div>-->
+							<div class="padding_top"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
 						</div>
 					</div>				
 				</div>
@@ -223,8 +269,8 @@
 						<div class="clearfix"></div>
 						<div class="des_grey_overlay">
 							<div class="des_overlay_content">
-								<div class="padding_bot"><a href="#" class="btn orange_btn">RESERVER UN COURS</a></div>
-								<div class="padding_bot"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
+								<!--<div class="padding_bot"><a href="#" class="btn orange_btn">RESERVER UN COURS</a></div>-->
+								<div class="padding_top"><a href="#" class="btn white_border white_text">EN SAVOIR PLUS</a></div>
 							</div>
 						</div>				
 					</div>
@@ -343,7 +389,57 @@
 
  
 
- 
+  <script type="text/javascript">
+  
+  $(function() {
+		  $('.selectpicker').selectpicker();
+		});
+	$('.cust_orangeselect').each(function(){
+	var $this = $(this), numberOfOptions = $(this).children('option').length;
+  
+	$this.addClass('select-hidden'); 
+	$this.wrap('<div class="select"></div>');
+	$this.after('<div class="select-styled"></div>');
+
+	var $styledSelect = $this.next('div.select-styled');
+	$styledSelect.text($this.children('option').eq(0).text());
+  
+	var $list = $('<ul />', {
+		'class': 'select-options'
+	}).insertAfter($styledSelect);
+  
+	for (var i = 0; i < numberOfOptions; i++) {
+		$('<li />', {
+			text: $this.children('option').eq(i).text(),
+			rel: $this.children('option').eq(i).val()
+		}).appendTo($list);
+	}
+  
+	var $listItems = $list.children('li');
+  
+	$styledSelect.click(function(e) {
+		e.stopPropagation();
+		$('div.select-styled.active').not(this).each(function(){
+			$(this).removeClass('active').next('ul.select-options').hide();
+		});
+		$(this).toggleClass('active').next('ul.select-options').toggle();
+	});
+  
+	$listItems.click(function(e) {
+		e.stopPropagation();
+		$styledSelect.text($(this).text()).removeClass('active');
+		$this.val($(this).attr('rel'));
+		$list.hide();
+		//console.log($this.val());
+	});
+  
+	$(document).click(function() {
+		$styledSelect.removeClass('active');
+		$list.hide();
+	});
+
+});
+	</script>
 
 <script>
 $(document).ready(function(){

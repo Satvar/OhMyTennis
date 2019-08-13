@@ -24,5 +24,12 @@ coach.controller('SideBarCtrl', function ($scope, $location, Coach) {
         $('#dashboard').removeClass('active')
         $location.path("/OhMyTennis/coach_dashboard/individualcourse")
     }
+    $scope.goToCalendar = function () {
+        $('#calendar').addClass('active')
+        $('#account').removeClass('active')
+        $('#dashboard').removeClass('active')
+        $location.path("/OhMyTennis/coach_dashboard/individualcourse1")
+    }
+    
 
 })

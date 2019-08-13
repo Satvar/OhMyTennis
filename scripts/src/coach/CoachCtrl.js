@@ -15,51 +15,74 @@ $scope.emailflag = true;
       $location.path("OhMyTennis/coach_dashboard/")
    }    
 
+
+   $scope.clearValidation = function () {
+
+      document.getElementById('Coach_Email').style.display = 'none';
+      $("#email").removeClass("alert_field");
+
+      document.getElementById('Coach_Password').style.display = 'none';
+      $("#password").removeClass("alert_field");
+      
+   }
+
+
+
  
    $scope.coachlogin = function () {
-      $location.path("OhMyTennis/coach_dashboard/")
-      return;
-     // console.log("in coach login")
+
       if ($scope.CoachConfig.Coach_Email == "" || $scope.CoachConfig.Coach_Email == undefined) {
-         alert("Please enter user email")
+         document.getElementById('Coach_Email').style.display = 'block';
+         $("#email").addClass("alert_field");
          return;
       }
 
 
       if ($scope.CoachConfig.Coach_Password == "" || $scope.CoachConfig.Coach_Password == undefined) {
-         alert("Please enter user password")
+        
+         document.getElementById('Coach_Password').style.display = 'block';
+         $("#password").addClass("alert_field");
+
          return;
       }
 
+      
       Coach.coachSignIn($scope.CoachConfig, function onSuccess(response) {
-         console.log(response);
+         
+         $scope.chkUser={};
+
+        
+         console.log($scope.chkUser);
          if(response.code == 200){
+            $scope.chkUser=response.coachlist[0];
+
+           console.log($scope.chkUser.User_type);
+
+           if($scope.chkUser.User_type=='coach')
+           {
+
+            document.getElementById('errMsg').style.display = 'none';
             sessionStorage.setItem("coachLoginFlag", "Y");
-            sessionStorage.setItem('loginDetailObj', JSON.stringify(response.coachlist))
-            $location.path("OhMyTennis/coach_dashboard/")
+            sessionStorage.setItem('loginDetailObj', JSON.stringify($scope.chkUser))
+
+            $location.path("OhMyTennis/coach_dashboard/");
+
+           }
+           else
+           {
+            document.getElementById('errMsg').style.display = 'none';
+            sessionStorage.setItem("userLoginFlag", "Y");
+            sessionStorage.setItem('loginDetailObj', JSON.stringify($scope.chkUser))
+
+            $location.path("OhMyTennis");
+           }
+
          }
-         if(response.code == 204){
-            sessionStorage.setItem("coachLoginFlag", "N");
-           // alert("credentials does not match")
-            $scope.commonflag =false
-            $scope.emailflag= true;
-         }
-         if(response.code == 203){
-            $scope.emailflag= false;
-            sessionStorage.setItem("coachLoginFlag", "N");
-          // alert("username doesnot exist")
+         else
+         {
+            document.getElementById('errMsg').style.display = 'block';
          }
 
-         // if (response.errCode == 200) {
-         //    sessionStorage.setItem('loginDetailObj', JSON.stringify(response.coachlist))
-         //    $location.path("OhMyTennis/coach_dashboard/")
-         // }
-         // else {
-         //    $scope.checkvalidity = false;
-         //   // console.log("in coach login")
-         //   // alert(response.msg)
-         // }
-         // $scope.CoachConfig = {};
       }, function onFailure() {
          console.log(err)
       });
@@ -73,16 +96,10 @@ $scope.emailflag = true;
       var results = regex.exec( url );
       return results == null ? null : results[1];
    }
-   //console.log(gup('emailVerificationFlag', window.location.href));
+
    
    
-      $scope.getIfConfirmEmail = function () {
-   
-         if(getParameter('emailVerificationFlag', window.location.href)=='1')
-         {
-            alert("Thanks for verifying your email address")
-         }
-      }
+      
       function getParameter( name, url ) {
    if (!url) url = location.href;
    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
@@ -91,14 +108,14 @@ $scope.emailflag = true;
    var results = regex.exec( url );
    return results == null ? null : results[1];
 }
-//console.log(gup('emailVerificationFlag', window.location.href));
 
 
    $scope.getIfConfirmEmail = function () {
 
       if(getParameter('emailVerificationFlag', window.location.href)=='1')
       {
-         alert("Thanks for verifying your email address")
+         document.getElementById('alertVerify').style.display = 'block';
+       //  alert("Thanks for verifying your email address")
       }
    }
    $scope.getIfConfirmEmail();

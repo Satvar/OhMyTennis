@@ -6,6 +6,7 @@ coach.controller('IndividualCourseCtrl', function ($scope, $location, Coach) {
     $('#dashboard').removeClass('active')
 $scope.dataConfig={};
 $scope.courselist =[];
+$scope.availabilityObj = {};
 $scope.getSessionObj = JSON.parse(sessionStorage.loginDetailObj);
 console.log("$scope.getSessionObj",$scope.getSessionObj[0].Coach_ID)
 $scope.CoachId = $scope.getSessionObj[0].Coach_ID;
@@ -44,4 +45,11 @@ console.log("$scope.dataConfig",$scope.CoachId)
         });
     }
 
+    $scope.saveAvailability = function () {
+
+        console.log($scope.availabilityObj);
+    }
+
+
 })
+ 

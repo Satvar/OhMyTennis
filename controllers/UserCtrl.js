@@ -22,13 +22,14 @@ const readHTMLFile = function(path, callback) {
 
 
 exports.quickInsertCoach = (req,res,next) => {
-    console.log("nisha",req.query);
+   
     const Coach_Email = req.body.Coach_Email;
     const Coach_Fname = req.body.Coach_Fname;
     const Coach_Lname = req.body.Coach_Lname;
     const Coach_Phone = req.body.Coach_Phone;
     const Coach_Password = req.body.Coach_Password;
     const Coach_City = req.body.Coach_City;
+    const  User_type = "coach";
 
     CoachModel.findAll({
         where: {
@@ -52,6 +53,8 @@ exports.quickInsertCoach = (req,res,next) => {
                     Coach_Phone:Coach_Phone,
                     Coach_Password:Coach_Password,
                     Coach_City:Coach_City,
+                    User_type:User_type
+
                 }) .then(result =>{
             
                     var transporter = nodemailer.createTransport({
@@ -91,6 +94,7 @@ exports.quickInsertCoach = (req,res,next) => {
             
                     res.status(201).json({
                         message : "Registration successfull",
+                        errCode:'200',
                         user:result
                     })
                 })
@@ -176,70 +180,6 @@ exports.detailedInsertCoach = (req, res, next) => {
 
 }
 
-// exports.detailedInsertCoach = (req,res,next) => {
-
-//    // console.log(req.file.path)
-//     const Coach_Bank_ACCNum = req.body.Coach_Bank_ACCNum;
-//     const Coach_Bank_Name = req.body.Coach_Bank_Name;
-//     const Branch_Code = req.body.Branch_Code;
-//     const Coach_Services = req.body.Coach_Services;
-//     const Active_City = req.body.Active_City;
-//     const Coach_Price = req.body.Coach_Price;
-//     const Coach_transport = req.body.Coach_transport;
-//     const Coach_payment_type = req.body.Coach_payment_type;
-//     const Coach_Image = req.files.Coach_Image[0].filename
-//     const Coach_Aviailability = req.body.Coach_Aviailability;
-//     const Coach_Email= req.body.Coach_Email;//where
-//     const Coach_Resume  = req.files.Coach_Resume[0].filename;
-//     const Coach_Description = req.body.Coach_Description;
-//     const Coach_PriceX10 = req.body.Coach_PriceX10;
-//     const Availability_StartDate = req.body.Availability_StartDate;
-//     const Availability_EndDate = req.body.Availability_EndDate;
-
-//     console.log(req.files.Coach_Resume[0]);
-
-
-//     CoachModel.update(
-//         { 
-
-//             Coach_Price:Coach_Price,
-          
-//             Coach_Bank_Name:Coach_Bank_Name,
-//             Branch_Code:Branch_Code,
-//             Coach_Bank_ACCNum:Coach_Bank_ACCNum,
-//             Coach_Aviailability:Coach_Aviailability,
-//             Coach_Services:Coach_Services,
-
-//             Active_City:Active_City,
-//             Coach_transport:Coach_transport,
-//             Coach_payment_type:Coach_payment_type,
-//             Coach_Image:Coach_Image,
-//             Coach_Resume : Coach_Resume,
-//             Coach_Description:Coach_Description,
-//             Coach_PriceX10:Coach_PriceX10,
-//             Availability_StartDate:Availability_StartDate,
-//             Availability_EndDate:Availability_EndDate
-//          },
-//         {
-//              where: {
-//             Coach_Email: Coach_Email,
-//             Coach_Status: 'verified' 
-//             } 
-//         }
-//       )
-//       .then(result =>
-//         res.status(200).json({
-//             msg : 'coach details updated successfully'
-//         })
-//     )
-//     .error(err =>
-//         res.status(500).json({
-//             msg : 'coach details updation Failed'
-//         })
-//     )
-
-// }
-
 exports.coachVerification = (req,res,next) =>{
 
     CoachModel.update(
@@ -271,10 +211,6 @@ exports.coachVerification = (req,res,next) =>{
             if (error) {
                 console.log(error);
             } else {
-                // res.status(200).json({
-                //     msg : 'coachVerification success'
-                // })
-                // console.log('Email sent: ' + info.response);
                 res.redirect('http://localhost:3000/#!/OhMyTennis/CoachLogin/?emailVerificationFlag=1');
             }
             });
@@ -288,41 +224,7 @@ exports.coachVerification = (req,res,next) =>{
         )
 
 }
-// exports.coachSignIn = (req, res, next) => {
-//     console.log(req.body);
-//     const Coach_Email = req.body.Coach_Email;
-//     const Coach_Password = req.body.Coach_Password;
-//     CoachModel.findAll({
-//         where: {
-//             Coach_Email: Coach_Email,
-//             Coach_Password: Coach_Password,
-//             Coach_Status: 'verified'
-//         }
-//     })
-//         .then(function (result) {
-//             console.log("rsult",result);
-//             if (result.length > 0) {
-//                 if(res)
-//                 res.status(200).json({
-//                     errCode:'200',
-//                     msg: "Valid credentials",
-//                     coachlist: result
-//                 })
-//             }
-//             else {
-//                 res.status(200).json({
-//                     errCode:'500',
-//                     msg: "Invalid credentials or you are not a verified by admin"
-//                 })
-//             }
 
-//         }).catch(err => {
-//             console.log(err)
-//             res.status(500).json({
-//                 error: err
-//             })
-//         });
-// }
 exports.coachSignIn = (req, res, next) => {
     console.log(req.body);
     const Coach_Email = req.body.Coach_Email;
@@ -330,8 +232,7 @@ exports.coachSignIn = (req, res, next) => {
     CoachModel.findAll({
         where: {
             Coach_Email: Coach_Email,
-          //  Coach_Password: Coach_Password,
-            Coach_Status: 'verified'
+           // Coach_Status: 'verified'
         }
     })
         .then(function (result) {
@@ -368,65 +269,97 @@ exports.coachSignIn = (req, res, next) => {
 
 exports.quickInsertUser = (req, res, next) => {
     console.log("bodyy",req.body)
-    const User_Email = req.body.User_Email;
-    const User_FirstName = req.body.User_FirstName;
-    const User_Name = req.body.User_Name;
-    const User_Phone = req.body.User_Phone;
-    const User_Password = req.body.User_Password;
-    userModel.create({
-        User_Email: User_Email,
-        User_FirstName: User_FirstName,
-        User_Name: User_Name,
-        User_Phone: User_Phone,
-        User_Password: User_Password
+    const Coach_Email = req.body.User_Email;
+    const Coach_Fname = req.body.User_FirstName;
+    const Coach_Lname = req.body.User_Name;
+    const Coach_Phone = req.body.User_Phone;
+    const Coach_Password = req.body.User_Password;
+    const Coach_City = req.body.User_City;
+    const  User_type = "user";
 
-
-    }).then(result => {
-
-        var transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: 'vinothh334@gmail.com',
-                pass: 'vinothsange3'
-            }
-        });
-        readHTMLFile(__dirname + '/emailtemplate.html', function(err, html) {
-            var template = handlebars.compile(html);
-            var replacements = {
-                 username: User_Name,
-                 link:'http://localhost:3000/OhMyTennis/userVerification/?User_Email=' + User_Email
-            };
-            var htmlToSend = template(replacements);
-
-        var mailOptions = {
-            from: 'vinothh334@gmail.com',
-            to: req.body.User_Email,
-            cc:'duraimurugan@tech.cloudnausor.com',
-            subject: 'OhMyTennis - Vérifiez votre E-mail',
-            html:htmlToSend
-            //text: 'Click here to verify user ' + 'http://localhost:3000/OhMyTennis/userVerification/?User_Email=' + User_Email
-        };
-
-
-
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        });
-    });
-
-
-        res.status(201).json({
-            message: "Registration successfull",
-            user: result
-        })
+    CoachModel.findAll({
+        where: {
+            Coach_Email: Coach_Email,
+        }
     })
+        .then(function (result) {
+            console.log(result);
 
+            if (result.length > 0) {
+                res.status(200).json({
+                    errCode:'505',
+                    message: "Email id already exits",
+                   
+                })
+            }
 
-        .catch(err => {
+            else
+            {
+                CoachModel.create({
+                    Coach_Email:Coach_Email,
+                    Coach_Fname:Coach_Fname,
+                    Coach_Lname:Coach_Lname,
+                    Coach_Phone:Coach_Phone,
+                    Coach_Password:Coach_Password,
+                    Coach_City:Coach_City,
+                    User_type:User_type
+            
+            
+                }).then(result => {
+            
+                    var transporter = nodemailer.createTransport({
+                        service: 'gmail',
+                        auth: {
+                            user: 'vinothh334@gmail.com',
+                            pass: 'vinothsange3'
+                        }
+                    });
+                    readHTMLFile(__dirname + '/emailtemplate.html', function(err, html) {
+                        var template = handlebars.compile(html);
+                        var replacements = {
+                             username: Coach_Fname,
+                             link:'http://localhost:3000/OhMyTennis/userVerification/?User_Email=' + User_Email
+                        };
+                        var htmlToSend = template(replacements);
+            
+                    var mailOptions = {
+                        from: 'vinothh334@gmail.com',
+                        to: req.body.User_Email,
+                        cc:'duraimurugan@tech.cloudnausor.com',
+                        subject: 'OhMyTennis - Vérifiez votre E-mail',
+                        html:htmlToSend
+                        //text: 'Click here to verify user ' + 'http://localhost:3000/OhMyTennis/userVerification/?User_Email=' + User_Email
+                    };
+            
+            
+            
+                    transporter.sendMail(mailOptions, function (error, info) {
+                        if (error) {
+                            console.log(error);
+                        } else {
+                            console.log('Email sent: ' + info.response);
+                        }
+                    });
+                });
+            
+            
+                    res.status(201).json({
+                        message: "Registration successfull",
+                        user: result
+                    })
+                })
+            
+            
+                    .catch(err => {
+                        console.log(err)
+                        res.status(500).json({
+                            error: err
+                        })
+                    });
+
+            }
+            
+        }).catch(err => {
             console.log(err)
             res.status(500).json({
                 error: err
@@ -514,9 +447,9 @@ console.log("req",req.file)
 
 exports.userVerification = (req,res,next) =>{
 
-    userModel.update(
+    CoachModel.update(
         { User_Status: 'verified' },
-        { where: {User_Email: req.query.User_Email } }
+        { where: {Coach_Email: req.query.User_Email } }
       )
       .then(result =>
         {
@@ -561,40 +494,7 @@ exports.userVerification = (req,res,next) =>{
 
 }
 
-// exports.userSignIn = (req, res, next) => {
-//     console.log(req.body);
-//     const User_Email = req.body.User_Email;
-//     const User_Password = req.body.User_Password;
-//     userModel.findAll({
-//         where: {
-//             User_Email: User_Email,
-//             User_Password: User_Password,
-//             User_Status: 'verified'
-//         }
-//     })
-//         .then(function (result) {
-//             console.log(result);
-//             if (result.length > 0) {
-//                 res.status(200).json({
-//                     errCode :'200',
-//                     msg: "Valid credentials",
-//                     userlist: result,
-//                 })
-//             }
-//             else {
-//                 res.status(200).json({
-//                     errCode :'500',
-//                     msg: "Invalid credentials or you are not verified by admin"
-//                 })
-//             }
 
-//         }).catch(err => {
-//             console.log(err)
-//             res.status(500).json({
-//                 error: err
-//             })
-//         });
-// }
 exports.userSignIn = (req, res, next) => {
     console.log(req.body);
     const User_Email = req.body.User_Email;
@@ -1039,7 +939,7 @@ exports.forgotpassworduser = (req, res, next) => {
             else {
                 res.send({
                     code: 203,
-                    success: "Email does not exits"
+                    success: "Email does not exits "
                 });
             }
 
@@ -1058,6 +958,9 @@ exports.userResetpassword = (req,res,next) =>{
 
 exports.setNewPasswordUser = (req, res, next) => {
     console.log("req", req.body)
+    console.log("redsdq", req.body)
+
+    console.log("redsdsdsq", req.body)
     const User_Email = req.body.User_Email;
     const User_Password = req.body.User_Password;//where
     userModel.update(
@@ -1084,3 +987,6 @@ exports.setNewPasswordUser = (req, res, next) => {
             })
         });
 }
+
+
+// dfakjdflajdfajsd

@@ -117,7 +117,15 @@ coach.config(function($stateProvider, $urlRouterProvider) {
             "" : {
                 templateUrl:"/src/coach/CoachLogin.html",
                 controller: 'CoachCtrl'
+            },
+            "header" : {
+                templateUrl:"src/homepage/header.html",
+                controller:'HeaderCtrl'
+            },
+            "footer" : {
+                templateUrl:"src/homepage/footer.html"
             }
+
         }
     })
     .state('userlogin', {
@@ -126,6 +134,13 @@ coach.config(function($stateProvider, $urlRouterProvider) {
             "" : {
                 templateUrl:"/src/user/UserLogin.html",
                 controller: 'UserCtrl'
+            },
+            "header" : {
+                templateUrl:"src/homepage/header.html",
+                controller:'HeaderCtrl'
+            },
+            "footer" : {
+                templateUrl:"src/homepage/footer.html"
             }
         }
     })
@@ -215,6 +230,13 @@ coach.config(function($stateProvider, $urlRouterProvider) {
             "" : {
                 templateUrl:"/src/coach/forgotpassword/ForgotPassword.html",
                 controller: 'ForgotPasswordCtrl'
+            },
+            "header" : {
+                templateUrl:"src/homepage/header.html",
+                controller:'HeaderCtrl'
+            },
+            "footer" : {
+                templateUrl:"src/homepage/footer.html"
             }
         }
     })
@@ -234,6 +256,13 @@ coach.config(function($stateProvider, $urlRouterProvider) {
             "" : {
                 templateUrl:"/src/user/forgetpassword/forgetpassword.html",
                 controller: 'ForgetPasswordCtrl'
+            },
+            "header" : {
+                templateUrl:"src/homepage/header.html",
+                controller:'HeaderCtrl'
+            },
+            "footer" : {
+                templateUrl:"src/homepage/footer.html"
             }
         }
     })
@@ -248,5 +277,41 @@ coach.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
+
+
+    .state('coachReg', {
+        url: "/OhMyTennis/CoachRegister/",
+        views : {
+            "" : {
+                templateUrl:"/src/coach/coach_registration.html",
+                controller: 'HeaderCtrl'
+            },
+            "header" : {
+                templateUrl:"src/homepage/header.html",
+                controller:'HeaderCtrl'
+            },
+            "footer" : {
+                templateUrl:"src/homepage/footer.html"
+            }
+        }
+    })
+
+    .state('userReg', {
+        url: "/OhMyTennis/UserRegister/",
+        views : {
+            "" : {
+                templateUrl:"/src/user/user_registration.html",
+                controller: 'HeaderCtrl'
+            },
+            "header" : {
+                templateUrl:"src/homepage/header.html",
+                controller:'HeaderCtrl'
+            },
+            "footer" : {
+                templateUrl:"src/homepage/footer.html"
+            }
+        }
+    })
+
     
     });
